@@ -4,8 +4,8 @@ const router = Router();
 
 router.get("/", (req, res, next) => {
     res.render("layout", { 
-        page: "UNCMP - Accueil",
-        pageTitle: "UNCMP"
+        page: "index",
+        pageTitle: "UNCMP - Accueil"
     });
 });
 
