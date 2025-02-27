@@ -14,7 +14,7 @@
 
     /********** Colors light variables *******/
     --clr-text: hsl(150, 23%, 5%);
-    --clr-background: hsl(135, 40%, 98%);
+    --clr-background: #ffffff;
     --clr-primary: hsl(146, 59%, 54%);
     --clr-secondary: hsl(146, 65%, 83%);
     --clr-accent: hsl(35, 97%, 45%);
@@ -82,8 +82,8 @@ button {
 }
 
 input, label, textarea, select {
+    border: none;
     outline: none;
-    display: block;
 }
 /*********************************************** RESET CSS **************************************/
 
@@ -184,7 +184,7 @@ input, label, textarea, select {
     background: var(--clr-background);
 }
 
-section:not(.hero-section) {
+section:where(:not(.hero-section)) {
     margin-block: 15rem;
 }
 
@@ -244,13 +244,9 @@ section:not(.hero-section) {
 }
 
 .footer-grid {
-    gap: 1rem;
+    gap: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
-}
-
-.footer-members {
-    grid-column: span 2;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
 }
 /*********************************************** FOOTER **************************************/
 
@@ -278,6 +274,11 @@ section:not(.hero-section) {
         color: white;
         place-self: center;
         padding-inline: 1rem;
+
+        display: flex;
+        row-gap: 2rem;
+        align-items: center;
+        flex-direction: column;
     }
     /*********************************************** HERO **************************************/
 
@@ -359,7 +360,7 @@ section:not(.hero-section) {
 /*********************************************** ABOUT PAGE **************************************/
 
     /*********************************************** ABOUT **************************************/
-    .about-section .container {
+    :is(.about-section, .context-section, .structuration-section) .container {
         display: grid;
         gap: 3rem 2rem;
         align-items: center;
@@ -377,6 +378,58 @@ section:not(.hero-section) {
     /*********************************************** SERVICE-CENTER **************************************/
 
 /*********************************************** ABOUT PAGE **************************************/
+
+
+/*********************************************** MEMBERSHIP PAGE **************************************/
+.membership-section {
+    margin-block: 8rem;
+}
+
+.form {
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--clr-primary);
+}
+
+.form-grid {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+}
+
+.form-group {
+    display: flex;
+    row-gap: .25rem;
+    flex-direction: column;
+}
+
+.form-group-alt {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+}
+
+.form-group label {
+    font-size: var(--fs-300);
+}
+
+.form-group :is(input, textarea, select){
+    border-radius: .5rem;
+    padding: .25rem .75rem;
+    border: 1px solid var(--clr-primary);
+    background-color: var(--clr-background);
+}
+
+.form-group :is(input, textarea, select):focus {
+    border: 1px solid var(--clr-accent);
+}
+
+.form-group:has(#description_activite){
+    grid-column: 1 / -1;
+}
+
+/*********************************************** MEMBERSHIP PAGE **************************************/
+
 
 
 /*********************************************** SMALL SCREENS **************************************/

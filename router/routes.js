@@ -16,4 +16,12 @@ router.get("/about", (req, res, next) => {
     });
 });
 
+router.get("/membership", (req, res, next) => {
+    res.render("layout", { 
+        page: "membership",
+        pageTitle: "UNCMP -A propos"
+    });
+});
+
+
 export default router;
