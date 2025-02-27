@@ -10,45 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <header class="header">
-            <div class="container">
-                <h1 class="text-brand">UNCPM</h1>
-                
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li class="nav-close">
-                            <button class="nav-link">
-                                <i class="bx bx-x text-md"></i>
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Accueil</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">A propos</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Missions</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Services</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="nav-open">
-                        <button class="nav-link">
-                            <i class="bx bx-menu-alt-right text-md"></i>
-                        </button>
-                    </div>
-                </nav>
-            </div>
-        </header>
+        <%- include("shared/header"); %>
 
         <section class="hero-section">
             <div class="container">
@@ -352,47 +314,8 @@
             </div>
         </section>
 
-        <footer class="footer" data-aos="fade-up" >
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-members flow">
-                        <h2 class="text">Nos Membres et Nos Partenaires</h2>
-                        <ul class="flow-sm">
-                            <li class="text-sm">17 coopératives membres à travers le Mali</li>
-                            <li class="text-sm">Plus de 14 000 adhérents</li>
-                            <li class="text-sm">Partenariats avec des acteurs nationaux et internationaux</li>
-                        </ul>
-                    </div>
+        <%- include("shared/footer"); %>
 
-                    <div class="quick-links flow">
-                        <h2 class="text">Liens rapides</h2>
-                        <ul class="flow-sm">
-                            <li><a href="#" class="link text-sm">A propos</a></li>
-                            <li><a href="#" class="link text-sm">Services</a></li>
-                            <li><a href="#" class="link text-sm">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-adress flow">
-                        <h2 class="text">Adresse</h2>
-                        <ul class="address flow-sm">
-                            <address class="text-sm">Centre commercial, Quartier du Fleuve</address>
-                            <address class="text-sm">RUE 303, porte 360. BPE: 2483</address>
-                        </ul>
-                    </div>
-
-                    <div class="social-links flow-sm">
-                        <h2 class="text">Reseaux sociaux</h2>
-                        <div>
-                            <a href="" class="text-md link bx bxl-whatsapp"></a>
-                            <a href="" class="text-md link bx bxl-facebook"></a>
-                            <a href="" class="text-md link bx bxl-messenger"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init({
