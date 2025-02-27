@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNCPM</title>
+    <title><%= pageTitle %></title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -13,7 +13,14 @@
         <%- include("shared/header"); %>
 
         <main>
-            <%- include("index"); %>
+            <% if(page === "index"){ %>
+                <%- include("index"); %>
+            <% } else if(page === "about") { %>
+                <%- include("about"); %>
+            <% } else if(page === "error") { %>
+                <%- include("error"); %>
+            <% } %>
+
         </main>        
 
         <%- include("shared/footer"); %>
