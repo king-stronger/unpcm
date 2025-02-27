@@ -1,328 +1,301 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNCPM</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
-<body>
-    <div id="app">
-        <%- include("shared/header"); %>
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-img-container">
+            <img src="https://placehold.co/1400x700/gray/gray" alt="About image" class="img">
+        </div>
 
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-img-container">
-                    <img src="https://placehold.co/1400x700/gray/gray" alt="About image" class="img">
-                </div>
-
-                <div class="hero-content flow-lg">
-                    <h2 class="text-xl text-center">Bienvenue à l'Union Nationale des <br>Coopératives de Planteurs et Maraîchers du Mali (UNCPM)</h2>
-                    
-                    <ul class="flow">
-                        <li class="text-md text-center">17 coopératives membres à travers le Mali</li>
-                        <li class="text-md text-center">Plus de 14 000 adhérents</li>
-                        <li class="text-md text-center">Partenariats avec des acteurs nationaux et internationaux</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-section">
-            <div class="container">
-                <div class="about-content flow">
-                    <h2 class="text-xl">A propos de nous</h2>
-                    <p>
-                        L'Union Nationale des Coopératives de Planteurs et Maraîchers du Mali (UNCPM) a été créée en 1985 sous l'initiative de neuf membres fondateurs. Depuis sa création, l'UNCPM a joué un rôle de leader dans le secteur agricole du Mali en soutenant les planteurs et maraîchers à travers des actions de plaidoyer, la gestion de projets de développement, et l'approvisionnement en semences et matériel agricole. Avec plus de 14 000 adhérents répartis dans 6 régions, l'UNCPM œuvre pour la transformation agro-écologique et le développement de l'agriculture durable.
-                    </p>
-                    <ul class="services flow-sm">
-                        <li class="">
-                            <i class='bx bx-cog text'></i>
-                            <span class="text">Assemblee Generale des delegues</span>
-                        </li>
-                        <li class="">
-                            <i class='bx bx-cog text'></i>
-                            <span class="text">Conseil d'administration</span>
-                        </li>
-                        <li class="">
-                            <i class='bx bx-cog text'></i>
-                            <span class="text">Comite de surveillance</span>
-                        </li>
-                        <li class="">
-                            <i class='bx bx-cog text'></i>
-                            <span class="text">Direction executive</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="about-img-container">
-                    <img src="https://placehold.co/600x500/lightgreen/black" alt="About image" class="img">
-                </div>
-            </div>
-        </section>
-
-        <section class="partners-section">
-            <div class="container flow-lg">
-                <h2 class="text-xl text-center">Partenaires</h2>
-
-                <div class="partners-grid">
-                    <article class="partner">
-                        <img src="assets/img/partners/ce.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/cnop.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/ier.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/agricord.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/irpad.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/acp.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/colead.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/afdi.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/ecotech.webp" alt="" class="partner-img">
-                    </article>
-                    <article class="partner">
-                        <img src="assets/img/partners/grdr.webp" alt="" class="partner-img">
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="missions-section">
-            <div class="container flow-lg">
-                <h2 class="text-xl text-center">Notre Mission et Nos Objectifs</h2>
-                
-                <p class="text-center">
-                    L'UNCPM se bat pour la défense des intérêts des planteurs et maraîchers partout au Mali. Elle vise à :
-                </p>
-        
-                <div class="missions-grid">
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/agroecology2.jpg" alt="" class="mission-img">
-                            <h3 class="text">Agro-écologie & Transformation</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Promouvoir l'agro-écologie et la transformation des produits locaux pour une agriculture durable.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/seedling.svg" alt="" class="mission-img">
-                            <h3 class="text">Approvisionnement Agricole</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Assurer l'approvisionnement en semences sélectionnées, matériel agricole et traitements phytosanitaires.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/growth.svg" alt="" class="mission-img">
-                            <h3 class="text">Accompagnement au Développement</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Accompagner les projets de développement agricole en garantissant une meilleure gouvernance des coopératives.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/training.svg" alt="" class="mission-img">
-                            <h3 class="text">Formation Coopérative</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Former et renforcer l'esprit coopératif parmi ses membres, assurant une bonne gestion et une rentabilité durable.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/selling.jpg" alt="" class="mission-img">
-                            <h3 class="text">Commercialisation des Produits</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Assurer la commercialisation, la transformation et la conservation des produits agricoles locaux.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/advocacy.svg" alt="" class="mission-img">
-                            <h3 class="text">Plaidoyer et Réformes</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Mener des actions de plaidoyer sur des enjeux de foncier, de marché et de subvention des produits horticoles.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/youth.jpg" alt="" class="mission-img">
-                            <h3 class="text">Soutien aux Jeunes & Femmes</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Accompagner les jeunes horticulteurs et les femmes pour les rendre acteurs du changement dans l'agriculture.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/innovation.jpg" alt="" class="mission-img">
-                            <h3 class="text">Innovation Technologique</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Promouvoir l'utilisation des technologies pour améliorer l'efficacité des pratiques horticoles et favoriser la transition agro-écologique.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/ressource.svg" alt="" class="mission-img">
-                            <h3 class="text">Mobilisation des Ressources</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Mobiliser des ressources humaines, financières et matérielles pour renforcer l'attractivité et la viabilité des professions horticoles.
-                        </span>
-                    </article>
-        
-                    <article class="mission">
-                        <div class="mission-header">
-                            <img src="assets/img/missions/climate2.svg" alt="" class="mission-img">
-                            <h3 class="text">Gestion des Contrainte Agro-climatiques</h3>
-                        </div>
-                        
-                        <span class="text-sm">
-                            Rechercher des solutions face aux contraintes agro-climatiques pour une meilleure résilience des cultures.
-                        </span>
-                    </article>
-                </div>
-            </div>
-        </section>        
-
-        <section class="service-center-section">
-            <div class="container">
-                <div class="service-center-img-container">
-                    <img src="https://placehold.co/600x500/lightblue/black" alt="" class="service-center-img">
-                </div>
-
-                <div class="service-center-content flow">
-                    <h2 class="text-xl text-center">Le Centre de Service et d'Innovation Horticole</h2>
-                    <p>
-                        Le centre se consacre à la promotion des innovations techniques et agro-écologiques, en particulier pour les jeunes horticulteurs et les femmes. Il offre également un soutien aux coopératives horticoles, développe des plans d'affaires, et améliore les pratiques horticoles à travers la digitalisation et l'efficacité des méthodes de culture.
-                    </p>
-                    <button class="btn">Voir plus</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <div class="container flow-lg">
-                <h3 class="text-xl text-center">Contact</h3>
-                <div class="contact-grid">
-                    <article class="contact flow">
-                        <div class="contact-header">
-                            <div class="contact-photo">
-                                <img src="https://placehold.co/50x50/brown/black" alt="Contact photo">
-                            </div>
-                            <div class="contact-name">
-                                <h3>Mme DIALLO M'Bodji SENE</h3>
-                                <span class="text-sm">Presidente du C.A</span>
-                            </div>
-                        </div>
-                        <ul class="contact-body">
-                            <li>
-                                <span>Email :</span>
-                                <a class="text-sm link-alt" href="mailto:mbodjisene74@gmail.com">mbodjisene74@gmail.com</a>
-                            </li>
-                            <li>
-                                <span>Tel :</span>
-                                <a class="text-sm link-alt" href="tel:+22373336633">+223 73 33 66 33</a>
-                            </li>
-                        </ul>
-                    </article>
-                    
-                    <article class="contact flow">
-                        <div class="contact-header">
-                            <div class="contact-photo">
-                                <img src="https://placehold.co/50x50/brown/black" alt="Contact photo">
-                            </div>
-                            <div class="contact-name">
-                                <h3>M. Adboulaye Bamba</h3>
-                                <span class="text-sm">Directeur des Services Techniques</span>
-                            </div>
-                        </div>
-                        <ul class="contact-body">
-                            <li>
-                                <span>Email :</span>
-                                <a class="text-sm link-alt" href="mailto:labamba@yahoo.fr">labamba@yahoo.fr</a>
-                            </li>
-                            <li>
-                                <span>Tel :</span>
-                                <a class="text-sm link-alt" href="tel:+22365657070">+223 65 65 70 70</a>
-                            </li>
-                        </ul>
-                    </article>
-    
-                    <article class="contact flow">
-                        <div class="contact-header">
-                            <div class="contact-photo">
-                                <img src="https://placehold.co/50x50/brown/black" alt="Contact photo">
-                            </div>
-                            <div class="contact-name">
-                                <h3>Mr Hamidou TRAORE</h3>
-                                <span class="text-sm">Assistant en Animation des Coopératives</span>
-                            </div>
-                        </div>
-                        <ul class="contact-body">
-                            <li>
-                                <span>Email :</span>
-                                <a class="text-sm link-alt" href="mailto:hamidoutraore920@gmail.com">hamidoutraore920@gmail.com</a>
-                            </li>
-                            <li>
-                                <span>Tel :</span>
-                                <a class="text-sm link-alt" href="tel:+22377072090">+223 77 07 20 90</a> /
-                                <a class="text-sm link-alt" href="tel:+22366527260">+223 66 52 72 60</a>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <%- include("shared/footer"); %>
-
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-        </script>
+        <div class="hero-content flow-lg">
+            <h2 class="text-xl text-center">Bienvenue à l'Union Nationale des <br>Coopératives de Planteurs et Maraîchers du Mali (UNCPM)</h2>
+            
+            <ul class="flow">
+                <li class="text-md text-center">17 coopératives membres à travers le Mali</li>
+                <li class="text-md text-center">Plus de 14 000 adhérents</li>
+                <li class="text-md text-center">Partenariats avec des acteurs nationaux et internationaux</li>
+            </ul>
+        </div>
     </div>
-</body>
-</html>
+</section>
+
+<section class="about-section">
+    <div class="container">
+        <div class="about-content flow">
+            <h2 class="text-xl">A propos de nous</h2>
+            <p>
+                L'Union Nationale des Coopératives de Planteurs et Maraîchers du Mali (UNCPM) a été créée en 1985 sous l'initiative de neuf membres fondateurs. Depuis sa création, l'UNCPM a joué un rôle de leader dans le secteur agricole du Mali en soutenant les planteurs et maraîchers à travers des actions de plaidoyer, la gestion de projets de développement, et l'approvisionnement en semences et matériel agricole. Avec plus de 14 000 adhérents répartis dans 6 régions, l'UNCPM œuvre pour la transformation agro-écologique et le développement de l'agriculture durable.
+            </p>
+            <ul class="services flow-sm">
+                <li class="">
+                    <i class='bx bx-cog text'></i>
+                    <span class="text">Assemblee Generale des delegues</span>
+                </li>
+                <li class="">
+                    <i class='bx bx-cog text'></i>
+                    <span class="text">Conseil d'administration</span>
+                </li>
+                <li class="">
+                    <i class='bx bx-cog text'></i>
+                    <span class="text">Comite de surveillance</span>
+                </li>
+                <li class="">
+                    <i class='bx bx-cog text'></i>
+                    <span class="text">Direction executive</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="about-img-container">
+            <img src="https://placehold.co/600x500/lightgreen/black" alt="About image" class="img">
+        </div>
+    </div>
+</section>
+
+<section class="partners-section">
+    <div class="container flow-lg">
+        <h2 class="text-xl text-center">Partenaires</h2>
+
+        <div class="partners-grid">
+            <article class="partner">
+                <img src="assets/img/partners/ce.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/cnop.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/ier.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/agricord.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/irpad.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/acp.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/colead.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/afdi.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/ecotech.webp" alt="" class="partner-img">
+            </article>
+            <article class="partner">
+                <img src="assets/img/partners/grdr.webp" alt="" class="partner-img">
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="missions-section">
+    <div class="container flow-lg">
+        <h2 class="text-xl text-center">Notre Mission et Nos Objectifs</h2>
+        
+        <p class="text-center">
+            L'UNCPM se bat pour la défense des intérêts des planteurs et maraîchers partout au Mali. Elle vise à :
+        </p>
+
+        <div class="missions-grid">
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/agroecology2.jpg" alt="" class="mission-img">
+                    <h3 class="text">Agro-écologie & Transformation</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Promouvoir l'agro-écologie et la transformation des produits locaux pour une agriculture durable.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/seedling.svg" alt="" class="mission-img">
+                    <h3 class="text">Approvisionnement Agricole</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Assurer l'approvisionnement en semences sélectionnées, matériel agricole et traitements phytosanitaires.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/growth.svg" alt="" class="mission-img">
+                    <h3 class="text">Accompagnement au Développement</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Accompagner les projets de développement agricole en garantissant une meilleure gouvernance des coopératives.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/training.svg" alt="" class="mission-img">
+                    <h3 class="text">Formation Coopérative</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Former et renforcer l'esprit coopératif parmi ses membres, assurant une bonne gestion et une rentabilité durable.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/selling.jpg" alt="" class="mission-img">
+                    <h3 class="text">Commercialisation des Produits</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Assurer la commercialisation, la transformation et la conservation des produits agricoles locaux.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/advocacy.svg" alt="" class="mission-img">
+                    <h3 class="text">Plaidoyer et Réformes</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Mener des actions de plaidoyer sur des enjeux de foncier, de marché et de subvention des produits horticoles.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/youth.jpg" alt="" class="mission-img">
+                    <h3 class="text">Soutien aux Jeunes & Femmes</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Accompagner les jeunes horticulteurs et les femmes pour les rendre acteurs du changement dans l'agriculture.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/innovation.jpg" alt="" class="mission-img">
+                    <h3 class="text">Innovation Technologique</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Promouvoir l'utilisation des technologies pour améliorer l'efficacité des pratiques horticoles et favoriser la transition agro-écologique.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/ressource.svg" alt="" class="mission-img">
+                    <h3 class="text">Mobilisation des Ressources</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Mobiliser des ressources humaines, financières et matérielles pour renforcer l'attractivité et la viabilité des professions horticoles.
+                </span>
+            </article>
+
+            <article class="mission">
+                <div class="mission-header">
+                    <img src="assets/img/missions/climate2.svg" alt="" class="mission-img">
+                    <h3 class="text">Gestion des Contrainte Agro-climatiques</h3>
+                </div>
+                
+                <span class="text-sm">
+                    Rechercher des solutions face aux contraintes agro-climatiques pour une meilleure résilience des cultures.
+                </span>
+            </article>
+        </div>
+    </div>
+</section>        
+
+<section class="service-center-section">
+    <div class="container">
+        <div class="service-center-img-container">
+            <img src="https://placehold.co/600x500/lightblue/black" alt="" class="service-center-img">
+        </div>
+
+        <div class="service-center-content flow">
+            <h2 class="text-xl text-center">Le Centre de Service et d'Innovation Horticole</h2>
+            <p>
+                Le centre se consacre à la promotion des innovations techniques et agro-écologiques, en particulier pour les jeunes horticulteurs et les femmes. Il offre également un soutien aux coopératives horticoles, développe des plans d'affaires, et améliore les pratiques horticoles à travers la digitalisation et l'efficacité des méthodes de culture.
+            </p>
+            <button class="btn">Voir plus</button>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container flow-lg">
+        <h3 class="text-xl text-center">Contact</h3>
+        <div class="contact-grid">
+            <article class="contact flow">
+                <div class="contact-header">
+                    <div class="contact-photo">
+                        <img src="https://placehold.co/50x50/brown/black" alt="Contact photo">
+                    </div>
+                    <div class="contact-name">
+                        <h3>Mme DIALLO M'Bodji SENE</h3>
+                        <span class="text-sm">Presidente du C.A</span>
+                    </div>
+                </div>
+                <ul class="contact-body">
+                    <li>
+                        <span>Email :</span>
+                        <a class="text-sm link-alt" href="mailto:mbodjisene74@gmail.com">mbodjisene74@gmail.com</a>
+                    </li>
+                    <li>
+                        <span>Tel :</span>
+                        <a class="text-sm link-alt" href="tel:+22373336633">+223 73 33 66 33</a>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="contact flow">
+                <div class="contact-header">
+                    <div class="contact-photo">
+                        <img src="https://placehold.co/50x50/brown/black" alt="Contact photo">
+                    </div>
+                    <div class="contact-name">
+                        <h3>M. Adboulaye Bamba</h3>
+                        <span class="text-sm">Directeur des Services Techniques</span>
+                    </div>
+                </div>
+                <ul class="contact-body">
+                    <li>
+                        <span>Email :</span>
+                        <a class="text-sm link-alt" href="mailto:labamba@yahoo.fr">labamba@yahoo.fr</a>
+                    </li>
+                    <li>
+                        <span>Tel :</span>
+                        <a class="text-sm link-alt" href="tel:+22365657070">+223 65 65 70 70</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="contact flow">
+                <div class="contact-header">
+                    <div class="contact-photo">
+                        <img src="https://placehold.co/50x50/brown/black" alt="Contact photo">
+                    </div>
+                    <div class="contact-name">
+                        <h3>Mr Hamidou TRAORE</h3>
+                        <span class="text-sm">Assistant en Animation des Coopératives</span>
+                    </div>
+                </div>
+                <ul class="contact-body">
+                    <li>
+                        <span>Email :</span>
+                        <a class="text-sm link-alt" href="mailto:hamidoutraore920@gmail.com">hamidoutraore920@gmail.com</a>
+                    </li>
+                    <li>
+                        <span>Tel :</span>
+                        <a class="text-sm link-alt" href="tel:+22377072090">+223 77 07 20 90</a> /
+                        <a class="text-sm link-alt" href="tel:+22366527260">+223 66 52 72 60</a>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>

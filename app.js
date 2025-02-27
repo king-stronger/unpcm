@@ -23,7 +23,7 @@ app.set("views", path.join(dirname, "views"));
 
 // Routes
 app.get("/", (req, res, next) => {
-    res.render("index");
+    res.render("layout");
 });
 
 // Set the server to listen on a port
