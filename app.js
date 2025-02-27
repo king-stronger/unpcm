@@ -1,6 +1,8 @@
 import path from 'path';
 import express from 'express';
 import { fileURLToPath } from 'url';
+import router from './router/routes.js';
+import errorHandler from './middlewares/errorHandler.js';
 
 
 // Reusable constant variables
@@ -22,9 +24,17 @@ app.set("view engine", "ejs");
 app.set("views", path.join(dirname, "views"));
 
 // Routes
-app.get("/", (req, res, next) => {
-    res.render("layout");
+app.use(router);
+
+// Handle Page not Found
+app.use((req, res, next) => {
+    const error = new Error("Page not Found !");
+    error.status = 404;
+    next(error);
 });
+
+// Handle Global Errors
+app.use(errorHandler);
 
 // Set the server to listen on a port
 app.listen(port, () => {
