@@ -1,0 +1,456 @@
+:root {
+    --flow: 1rem;
+
+    /********** Font sizes variables *******/
+    --fs-100: clamp(0.6944rem, 0.6856rem + 0.0444vw, 0.72rem);
+    --fs-200: clamp(0.8333rem, 0.8101rem + 0.1159vw, 0.9rem);
+    --fs-300: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --fs-400: clamp(1.2rem, 1.1283rem + 0.3587vw, 1.4063rem);
+    --fs-500: clamp(1.44rem, 1.3295rem + 0.5527vw, 1.7578rem);
+    --fs-600: clamp(1.728rem, 1.5648rem + 0.8161vw, 2.1973rem);
+    --fs-700: clamp(2.0736rem, 1.8395rem + 1.1704vw, 2.7466rem);
+    --fs-800: clamp(2.4883rem, 2.1597rem + 1.6433vw, 3.4332rem);
+
+
+    /********** Colors light variables *******/
+    --clr-text: hsl(150, 23%, 5%);
+    --clr-background: hsl(135, 40%, 98%);
+    --clr-primary: hsl(146, 59%, 54%);
+    --clr-secondary: hsl(146, 65%, 83%);
+    --clr-accent: hsl(35, 97%, 45%);
+
+    /********** Colors dark variables *******/
+    --clrd-text: hsl(150, 23%, 95%);
+    --clrd-background: hsl(135, 40%, 2%);
+    --clrd-primary: hsl(146, 59%, 46%);
+    --clrd-secondary: hsl(146, 66%, 17%);
+    --clrd-accent: hsl(35, 97%, 55%);
+}
+
+/*********************************************** RESET CSS **************************************/
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    min-height: 100dvh;
+    font-size: var(--fs-300);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: bold;
+    text-wrap: balance;
+}
+
+p, span, li {
+    line-height: 1.5;
+    text-wrap: pretty;
+    width: min(65ch, 100%);
+}
+
+img, video, svg, picture {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--clr-text);
+}
+
+button { 
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+input, label, textarea, select {
+    outline: none;
+    display: block;
+}
+/*********************************************** RESET CSS **************************************/
+
+/*********************************************** REUSABLE CSS **************************************/
+    /************************************ STRUCTURE ******************************/
+    .container {
+        margin-inline: auto;
+        width: min(100% - 2rem, 1200px);
+    }
+
+    .flow-lg > * + * {
+        margin-top: calc(var(--flow) * 2);
+    }
+
+    .flow > * + * {
+        margin-top: var(--flow);
+    }
+
+    .flow-sm > * + * {
+        margin-top: calc(var(--flow) / 2);
+    }
+    /************************************ STRUCTURE ******************************/
+
+
+    /************************************ Typographies ******************************/
+    .text-xxl {
+        font-size: var(--fs-700);
+    }
+
+    .text-xl {
+        font-size: var(--fs-600);
+    }
+
+    .text-brand {
+        font-size: var(--fs-500);
+    }
+
+    .text-lg {
+        font-size: var(--fs-500);
+    }
+
+    .text-md {
+        font-size: var(--fs-400);
+    }
+
+    .text {
+        font-size: var(--fs-300);
+    }
+
+    .text-sm {
+        font-size: var(--fs-200);
+    }
+
+    .text-xs {
+        font-size: var(--fs-100);
+    }
+
+    .text-center {
+        text-align: center;
+        margin-inline: auto;
+    }
+    /************************************ Typographies ******************************/
+
+    /************************************ Buttons & Links ******************************/
+    .btn {
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        background: var(--clr-primary);
+    }
+
+    .btn:hover {
+        background: var(--clr-accent);
+    }
+
+    .link, .link-alt {
+        display: inline-flex;
+    }
+
+    .link {
+        color: var(--clr-text);
+    }
+
+    .link-alt {
+        color: #6894ff;
+    }
+    
+    :is(.link, .link-alt):hover {
+        color: var(--clr-accent);
+    }
+    /************************************ Buttons & Links ******************************/
+
+
+/*********************************************** REUSABLE CSS **************************************/
+#app {
+    position: relative;
+    overflow-x: hidden;
+    color: var(--clr-text);
+    background: var(--clr-background);
+}
+
+section + section {
+    margin-block: 15rem;
+}
+
+/*********************************************** HEADER **************************************/
+.header {
+    z-index: 1;
+    position: sticky;
+    inset: 0 0 auto 0;
+    background-color: var(--clr-secondary);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    padding-block: .5rem;
+    justify-content: space-between;
+}
+
+.nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-menu {
+    gap: 2rem;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-menu li {
+    flex: 0 0 fit-content;
+}
+
+.nav-close, .nav-open {
+    display: none;
+}
+
+.nav-link {
+    color: var(--clr-text);
+
+    display: inline-flex;
+    font-size: var(--fs-300);
+    transition: scale 300ms ease;
+}
+
+.nav-link:hover {
+    scale: 1.15;
+    color: var(--clr-accent);
+}
+/*********************************************** HEADER **************************************/
+
+/*********************************************** HERO **************************************/
+.hero-section .container {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "stacking";   
+}
+
+.hero-section .container  > * {
+    grid-area: stacking;
+}
+
+.hero-img-container img {
+    width: 100%;
+    height: 75dvh;
+    object-fit: cover;
+}
+
+.hero-content {
+    color: white;
+    place-self: center;
+    padding-inline: 1rem;
+}
+/*********************************************** HERO **************************************/
+
+
+/*********************************************** ABOUT **************************************/
+.about-section .container {
+    display: grid;
+    gap: 3rem 2rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+/*********************************************** ABOUT **************************************/
+
+
+/*********************************************** PARTNERS **************************************/
+.partners-grid {
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+/*********************************************** PARTNERS **************************************/
+
+
+
+/*********************************************** MISSIONS & GOALS **************************************/
+.missions-section {
+    padding-block: 5rem;
+    background-color: var(--clr-secondary);
+}
+
+.missions-grid {
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.mission {
+    display: flex;
+    row-gap: .5rem;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--clr-background);
+}
+
+.mission-img {
+    width: 20%;
+}
+/*********************************************** MISSIONS & GOALS **************************************/
+
+
+/*********************************************** SERVICE-CENTER **************************************/
+.service-center-section .container {
+    display: grid;
+    gap: 3rem 2rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+/*********************************************** SERVICE-CENTER **************************************/
+
+
+/*********************************************** CONTACT **************************************/
+.contact-grid {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+.contact {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    outline: 1px solid lightgray;
+}
+
+.contact-header {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.contact-photo img {
+    border-radius: 50%;
+}
+/*********************************************** CONTACT **************************************/
+
+
+/*********************************************** FOOTER **************************************/
+.footer {
+    padding-block: 5rem;
+    background-color: var(--clr-secondary);
+}
+
+.footer-grid {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+}
+
+.footer-members {
+    grid-column: span 2;
+}
+
+
+/*********************************************** FOOTER **************************************/
+
+
+.icons {
+    width: 12%;
+    z-index: 0;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+#app .icons {
+    opacity: 0.35;
+}
+.icons:nth-of-type(1) {
+    left: 6%;
+    top: 28%;
+    rotate: 45deg;
+}
+
+.icons:nth-of-type(2) {
+    left: 86%;
+    top: 38%;
+}
+
+.icons:nth-of-type(3) {
+    left: 6%;
+    top: 60%;
+}
+
+.icons:nth-of-type(4) {
+    left: 60%;
+    top: 78%;
+}
+
+.icons:nth-of-type(5) {
+    left: 80%;
+    top: 95%;
+}
+
+
+/*********************************************** SMALL SCREENS **************************************/
+@media (width < 600px){
+    .nav-menu {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 100dvh;
+        inset: 0 0 auto 0;
+        position: absolute;
+        translate: 0 -100%;
+        transition: translate 300ms ease;
+        background-color: var(--clr-secondary);
+    }
+
+    .nav-menu.open {
+        translate: 0 0;
+    }
+
+    .nav-item, .nav-close {
+        width: fit-content;
+    }
+
+    .nav-close, .nav-open {
+        display: inline-flex;
+    }
+
+    .icons {
+        display: none;
+    }
+    
+    .about-content :is(h2, p){
+        text-align: center;
+    }
+
+    .social-links {
+        order: 3;
+    }
+
+    .footer-grid {
+        row-gap: 3rem;
+    }
+
+    .footer-adress {
+        order: 4;
+        grid-column: span 2;
+    }
+}
+/*********************************************** SMALL SCREENS **************************************/
