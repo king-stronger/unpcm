@@ -60,6 +60,7 @@ p, span, li {
 img, video, svg, picture {
     display: block;
     max-width: 100%;
+    object-fit: cover;
 }
 
 ul {
@@ -262,6 +263,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .hero-section .container {
         width: 100%;
         display: grid;
+        position: relative;
         grid-template-areas: "stacking";   
     }
 
@@ -275,7 +277,16 @@ section:where(:not(.hero-section, .blog-all-section)) {
         object-fit: cover;
     }
 
+    .hero-content::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        z-index: -1;
+        background-color: hsla(0, 0%, 0%, 0.4);
+    }
+
     .hero-content {
+        z-index: 1;
         color: white;
         place-self: center;
         padding-inline: 1rem;
