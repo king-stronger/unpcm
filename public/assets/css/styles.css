@@ -151,7 +151,12 @@ input, label, textarea, select {
     .btn {
         padding: .5rem 1rem;
         border-radius: 1rem;
+        font-size: var(--fs-200);
         background: var(--clr-primary);
+    }
+
+    .btn-lg {
+        font-size: var(--fs-300);
     }
 
     .btn:hover {
@@ -185,7 +190,7 @@ input, label, textarea, select {
 }
 
 section:where(:not(.hero-section, .blog-all-section)) {
-    margin-block: 15rem;
+    margin-block: 12rem;
 }
 
 /*********************************************** HEADER **************************************/
@@ -282,7 +287,29 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
     /*********************************************** HERO **************************************/
 
+    .home-section .container {
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    }
 
+    .home-list {
+        gap: 2rem 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+    }
+
+    .home-list li {
+        display: flex;
+        row-gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 1rem;
+        border-radius: .5rem;
+        border: 1px solid var(--clr-primary);
+    }
 
     /*********************************************** PARTNERS **************************************/
     .partners-grid {
