@@ -16,6 +16,13 @@ router.get("/about", (req, res, next) => {
     });
 });
 
+router.get("/blog", (req, res, next) => {
+    res.render("layout", { 
+        page: "blog",
+        pageTitle: "UNCMP - Blog"
+    });
+});
+
 router.get("/membership", (req, res, next) => {
     res.render("layout", { 
         page: "membership",

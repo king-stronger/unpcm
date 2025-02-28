@@ -184,7 +184,7 @@ input, label, textarea, select {
     background: var(--clr-background);
 }
 
-section:where(:not(.hero-section)) {
+section:where(:not(.hero-section, .blog-all-section)) {
     margin-block: 15rem;
 }
 
@@ -199,7 +199,7 @@ section:where(:not(.hero-section)) {
 .header .container {
     display: flex;
     align-items: center;
-    padding-block: .5rem;
+    padding-block: 1rem;
     justify-content: space-between;
 }
 
@@ -378,6 +378,30 @@ section:where(:not(.hero-section)) {
     /*********************************************** SERVICE-CENTER **************************************/
 
 /*********************************************** ABOUT PAGE **************************************/
+
+/*********************************************** BLOG PAGE **************************************/
+.blog-all-section {
+    margin-block: 5rem 10rem;
+}
+
+.blog-grid {
+    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr));
+}
+
+.blog-grid .post-img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.post-infos {
+    display: flex;
+    row-gap: .5rem;
+    flex-direction: column;
+}
+/*********************************************** BLOG PAGE **************************************/
+
 
 
 /*********************************************** MEMBERSHIP PAGE **************************************/
