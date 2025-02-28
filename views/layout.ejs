@@ -6,7 +6,6 @@
     <title><%= pageTitle %></title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <% if(page === "index"){ %>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <% } %>
@@ -64,14 +63,6 @@
                 });
             </script>
         <% } %>
-
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-        </script>
     </div>
 </body>
 </html>
