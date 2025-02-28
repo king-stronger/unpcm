@@ -312,15 +312,10 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     /*********************************************** PARTNERS **************************************/
-    .partners-grid {
-        display: grid;
-        row-gap: 2rem;
-        column-gap: 2rem;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    .partners-section .container {
+        width: calc(100% - 2rem);
     }
     /*********************************************** PARTNERS **************************************/
-
 
 
     /*********************************************** MISSIONS & GOALS **************************************/
