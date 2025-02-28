@@ -312,6 +312,10 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     /*********************************************** PARTNERS **************************************/
+    .partners-section {
+        margin-top: 2rem;
+    }
+
     .partners-section .container {
         width: calc(100% - 2rem);
     }
