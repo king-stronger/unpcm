@@ -37,13 +37,13 @@
 
             <script defer>
                 const swiper = new Swiper('.swiper', {
-                    // Optional parameters
-                    direction: 'horizontal',
                     loop: true,
                     autoplay: {
-                        delay: 1000,
+                        delay: 0,
                         disableOnInteraction: false,
                     },
+                    speed: 750,
+                    freeMode: true,
                     slidesPerView: 6,
                     spaceBetween: 30,
                     breakpoints: {
