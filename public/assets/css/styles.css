@@ -413,16 +413,19 @@ section:where(:not(.hero-section, .blog-all-section)) {
 :is(.post-img, .project-img) {
     width: 100%;
     aspect-ratio: 3/2;
-    border-radius: .5rem;
 }
 
 .post, .project{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .post-infos, .project-infos {
+    padding: 1rem;
+    border-radius: 0 0 .5rem .5rem;
+    border: 1px solid var(--clr-primary);
+
+    flex-grow: 1;
     display: flex;
     row-gap: .5rem;
     align-items: start;
@@ -439,6 +442,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 .post-btn, .project-btn {
     align-self: end;
+    margin-top: auto;
 }
 /*********************************************** BLOG PAGE **************************************/
 
