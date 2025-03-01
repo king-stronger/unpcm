@@ -111,11 +111,11 @@ input, label, textarea, select {
 
     /************************************ Typographies ******************************/
     .text-xxl {
-        font-size: var(--fs-700);
+        font-size: var(--fs-800);
     }
 
     .text-xl {
-        font-size: var(--fs-600);
+        font-size: var(--fs-700);
     }
 
     .text-brand {
@@ -305,6 +305,10 @@ section:where(:not(.hero-section, .blog-all-section)) {
         border: 1px solid var(--clr-primary);
     }
 
+    .home-img {
+        height: 100%;
+    }
+
     /*********************************************** PARTNERS **************************************/
     .partners-section {
         margin-top: 0;
@@ -400,32 +404,32 @@ section:where(:not(.hero-section, .blog-all-section)) {
     margin-block: 5rem 10rem;
 }
 
-.blog-grid {
+.blog-grid, .projects-grid {
     gap: 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr));
 }
 
-.blog-grid .post-img {
+:is(.post-img, .project-img) {
     width: 100%;
     aspect-ratio: 3/2;
     border-radius: .5rem;
 }
 
-.post {
+.post, .project{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.post-infos {
+.post-infos, .project-infos {
     display: flex;
     row-gap: .5rem;
     align-items: start;
     flex-direction: column;
 }
 
-.post-description {
+.post-description, .project-description {
     line-clamp: 3;
     overflow: hidden;
     display: -webkit-box;
@@ -433,7 +437,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     -webkit-box-orient: vertical;
 }
 
-.post-btn {
+.post-btn, .project-btn {
     align-self: end;
 }
 /*********************************************** BLOG PAGE **************************************/
