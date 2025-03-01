@@ -152,7 +152,7 @@ input, label, textarea, select {
     .btn {
         padding: .5rem 1rem;
         border-radius: 1rem;
-        font-size: var(--fs-200);
+        font-size: var(--fs-300);
         background: var(--clr-primary);
     }
 
@@ -218,6 +218,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .nav-menu {
     gap: 2rem;
     display: flex;
+    align-items: center;
     justify-content: end;
 }
 
@@ -233,7 +234,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     color: var(--clr-text);
 
     display: inline-flex;
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
     transition: scale 300ms ease;
 }
 
@@ -330,17 +331,13 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     .mission {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: 1fr 4fr;
-
         padding: 1rem;
         border-radius: .5rem;
         background-color: var(--clr-background);
     }
 
     .mission-img {
-        width: 100%;
+        width: 20%;
     }
     /*********************************************** MISSIONS & GOALS **************************************/
 
