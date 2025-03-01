@@ -411,11 +411,25 @@ section:where(:not(.hero-section, .blog-all-section)) {
     border-radius: .5rem;
 }
 
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .post-infos {
     display: flex;
     row-gap: .5rem;
     align-items: start;
     flex-direction: column;
+}
+
+.post-description {
+    line-clamp: 4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .post-btn {
