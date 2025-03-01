@@ -344,24 +344,28 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
     /*********************************************** CONTACT **************************************/
     .contact-grid {
-        gap: 2rem;
+        gap: 2rem 4rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     }
 
     .contact {
-        border-radius: 0.5rem;
-        padding: 1rem;
-        outline: 1px solid lightgray;
+        display: flex;
+        row-gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 2rem;
+        border-radius: .25rem .25rem 50% 50%;
+        outline: 1px solid var(--clr-primary);
     }
 
-    .contact-header {
-        display: flex;
-        column-gap: 1rem;
-        align-items: center;
+    .contact-infos {
+        margin-top: auto;
     }
 
     .contact-photo img {
+        width: 100px;
         border-radius: 50%;
     }
     /*********************************************** CONTACT **************************************/
@@ -422,10 +426,10 @@ section:where(:not(.hero-section, .blog-all-section)) {
 }
 
 .post-description {
-    line-clamp: 4;
+    line-clamp: 3;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
