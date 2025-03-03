@@ -151,16 +151,33 @@ input, label, textarea, select {
     /************************************ Buttons & Links ******************************/
     .btn {
         padding: .5rem 1rem;
-        border-radius: 1rem;
+        border-radius: .25rem;
         font-size: var(--fs-300);
+    }
+    
+    .btn-primary {
         background: var(--clr-primary);
     }
 
+    .btn-secondary {
+        color: var(--clr-primary);
+        background: var(--clr-background);
+        border: 1px solid var(--clr-primary);
+    }
+
     .btn-lg {
-        font-size: var(--fs-300);
+        padding: 1rem 2rem;
+        font-size: var(--fs-400);
+    }
+
+    .btn-xl {
+        padding: 1rem 2rem;
+        font-size: var(--fs-500);
     }
 
     .btn:hover {
+        border: none;
+        color: var(--clr-text);
         background: var(--clr-accent);
     }
 
@@ -246,7 +263,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 /*********************************************** FOOTER **************************************/
 .footer {
-    padding-block: 5rem;
+    padding-block: 4rem 2rem;
     background-color: var(--clr-secondary);
 }
 
@@ -288,7 +305,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     .home-list {
-        gap: 2rem 3rem;
+        gap: 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
     }
@@ -427,7 +444,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
     flex-grow: 1;
     display: flex;
-    row-gap: .5rem;
+    row-gap: 1rem;
     align-items: start;
     flex-direction: column;
 }
