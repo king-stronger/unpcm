@@ -439,6 +439,18 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
     /*********************************************** CONTACT **************************************/
 
+    .faq-list {
+        display: flex;
+        row-gap: 1rem;
+        flex-direction: column;
+    }
+
+    .faq-item {
+        padding: .5rem;
+        border-radius: .5rem;
+        border: 1px solid var(--clr-earth-green);
+    }
+
 /*********************************************** INDEX PAGE **************************************/
 
 
