@@ -25,6 +25,9 @@
     --clrd-primary: hsl(146, 59%, 46%);
     --clrd-secondary: hsl(146, 66%, 17%);
     --clrd-accent: hsl(35, 97%, 55%);
+
+
+    --content-ratio: 1.25;
 }
 
 /*********************************************** RESET CSS **************************************/
@@ -95,7 +98,7 @@ input, label, textarea, select {
     /************************************ STRUCTURE ******************************/
     .container {
         margin-inline: auto;
-        width: min(100% - 2rem, 1200px);
+        width: min(100% - 3rem, 1400px);
     }
 
     .flow-lg > * + * {
@@ -273,7 +276,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .footer-grid {
     gap: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(calc(175px * var(--content-ratio)), 100%), 1fr));
 }
 /*********************************************** FOOTER **************************************/
 
@@ -289,7 +292,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .hero-section .container {
         display: grid;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));        
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(350px * var(--content-ratio))), 1fr));        
     }
     
 
@@ -304,13 +307,13 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .home-section .container {
         gap: 3rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(350px * var(--content-ratio))), 1fr));
     }
 
     .home-list {
         gap: 2rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(225px * var(--content-ratio))), 1fr));
     }
 
     .home-list li {
@@ -351,7 +354,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .missions-grid {
         gap: 1.5rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(275px * var(--content-ratio))), 1fr));
     }
 
     .mission {
@@ -370,7 +373,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .contact-grid {
         gap: 2rem 4rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(calc(275px * var(--content-ratio)), 100%), 1fr));
     }
 
     .contact {
@@ -404,7 +407,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
         display: grid;
         gap: 3rem 2rem;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(calc(350px * var(--content-ratio)), 100%), 1fr));
     }
     /*********************************************** ABOUT **************************************/
 
@@ -413,7 +416,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
         display: grid;
         gap: 3rem 2rem;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(calc(350px * var(--content-ratio)), 100%), 1fr));
     }
     /*********************************************** SERVICE-CENTER **************************************/
 
@@ -427,7 +430,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .blog-grid, .projects-grid {
     gap: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(250px * var(--content-ratio))), 1fr));
 }
 
 :is(.post-img, .project-img) {
@@ -482,7 +485,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .form-grid {
     display: grid;
     gap: 1rem 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(calc(275px * var(--content-ratio)), 100%), 1fr));
 }
 
 .form-group {
@@ -568,4 +571,11 @@ section:where(:not(.hero-section, .blog-all-section)) {
         grid-column: span 2;
     }
 }
+
+@media (width < 900px){
+    :root {
+        --content-ratio: 1;
+    }
+}
+
 /*********************************************** SMALL SCREENS **************************************/
