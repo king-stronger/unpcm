@@ -443,6 +443,10 @@ section:where(:not(.hero-section, .blog-all-section)) {
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(min(calc(350px * var(--content-ratio)), 100%), 1fr));
 }
+
+:is(.about-section, .context-section, .structuration-section, .service-center-section) img {
+    border-radius: .25rem;
+}
 /*********************************************** ABOUT PAGE **************************************/
 
 /*********************************************** BLOG PAGE **************************************/
@@ -533,7 +537,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .form {
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid var(--clr-earth-red);
+    border: 1px solid var(--clr-earth-green);
 }
 
 .form-grid {
@@ -561,12 +565,12 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .form-group :is(input, textarea, select){
     border-radius: .5rem;
     padding: .25rem .75rem;
-    border: 1px solid var(--clr-earth-red);
     background-color: var(--clr-background);
+    border: 1px solid var(--clr-earth-green);
 }
 
 .form-group :is(input, textarea, select):focus {
-    border: 1px solid var(--clr-earth-yellow);
+    border: 1px solid var(--clr-earth-red);
 }
 
 .form-group:has(#description_activite){
