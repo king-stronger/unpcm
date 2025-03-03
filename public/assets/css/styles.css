@@ -2,22 +2,19 @@
     --flow: 1rem;
 
     /********** Font sizes variables *******/
-    --fs-100: clamp(0.6944rem, 0.6856rem + 0.0444vw, 0.72rem);
-    --fs-200: clamp(0.8333rem, 0.8101rem + 0.1159vw, 0.9rem);
-    --fs-300: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
-    --fs-400: clamp(1.2rem, 1.1283rem + 0.3587vw, 1.4063rem);
-    --fs-500: clamp(1.44rem, 1.3295rem + 0.5527vw, 1.7578rem);
-    --fs-600: clamp(1.728rem, 1.5648rem + 0.8161vw, 2.1973rem);
-    --fs-700: clamp(2.0736rem, 1.8395rem + 1.1704vw, 2.7466rem);
-    --fs-800: clamp(2.4883rem, 2.1597rem + 1.6433vw, 3.4332rem);
+    --fs-100: clamp(0.64rem, 0.7134rem + -0.0947vw, 0.6944rem);
+    --fs-200: clamp(0.8rem, 0.8449rem + -0.058vw, 0.8333rem);
+    --fs-300: clamp(1rem, 1rem + 0vw, 1rem);
+    --fs-400: clamp(1.2rem, 1.1826rem + 0.087vw, 1.25rem);
+    --fs-500: clamp(1.44rem, 1.3974rem + 0.213vw, 1.5625rem);
+    --fs-600: clamp(1.728rem, 1.6497rem + 0.3915vw, 1.9531rem);
+    --fs-700: clamp(2.0736rem, 1.9457rem + 0.6397vw, 2.4414rem);
+    --fs-800: clamp(2.4883rem, 2.2923rem + 0.9799vw, 3.0518rem);
 
 
     /********** Colors light variables *******/
     --clr-text: hsl(150, 23%, 5%);
     --clr-background: #ffffff;
-    --clr-primary: hsl(146, 59%, 54%);
-    --clr-secondary: hsl(146, 65%, 83%);
-    --clr-accent: hsl(35, 97%, 45%);
 
     /********** Colors dark variables *******/
     --clrd-text: hsl(150, 23%, 95%);
@@ -25,6 +22,22 @@
     --clrd-primary: hsl(146, 59%, 46%);
     --clrd-secondary: hsl(146, 66%, 17%);
     --clrd-accent: hsl(35, 97%, 55%);
+    
+    /********** Earth colors variables *******/
+    --clr-earth-red: hsl(360, 40.7%, 61.2%);
+    --clr-earth-purple: hsl(272, 40.7%, 61.2%);
+    --clr-earth-blue: hsl(237, 40.7%, 61.2%);
+    --clr-earth-cyan: hsl(185, 40.7%, 61.2%);
+    --clr-earth-green: hsl(129, 40.7%, 61.2%);
+    --clr-earth-yellow: hsl(56, 40.7%, 61.2%);
+
+    /********** Pastel colors variables *******/
+    --clr-pastel-red: hsl(360, 71.6%, 85.9%);
+    --clr-pastel-purple: hsl(272, 71.6%, 85.9%);
+    --clr-pastel-blue: hsl(237, 71.6%, 85.9%);
+    --clr-pastel-cyan: hsl(185, 71.6%, 85.9%);
+    --clr-pastel-green: hsl(129, 71.6%, 85.9%);
+    --clr-pastel-yellow: hsl(56, 71.6%, 85.9%);
 
 
     --content-ratio: 1.25;
@@ -125,7 +138,7 @@ input, label, textarea, select {
     }
 
     .text-brand {
-        font-size: var(--fs-500);
+        font-size: var(--fs-600);
     }
 
     .text-lg {
@@ -162,13 +175,13 @@ input, label, textarea, select {
     }
     
     .btn-primary {
-        background: var(--clr-primary);
+        background: var(--clr-earth-green);
     }
 
     .btn-secondary {
-        color: var(--clr-primary);
+        color: var(--clr-earth-red);
         background: var(--clr-background);
-        border: 1px solid var(--clr-primary);
+        border: 1px solid var(--clr-earth-red);
     }
 
     .btn-lg {
@@ -184,7 +197,7 @@ input, label, textarea, select {
     .btn:hover {
         border: none;
         color: var(--clr-text);
-        background: var(--clr-accent);
+        background: var(--clr-earth-red);
     }
 
     .link, .link-alt {
@@ -200,7 +213,7 @@ input, label, textarea, select {
     }
     
     :is(.link, .link-alt):hover {
-        color: var(--clr-accent);
+        color: var(--clr-earth-red);
     }
     /************************************ Buttons & Links ******************************/
 
@@ -222,7 +235,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     z-index: 1;
     position: sticky;
     inset: 0 0 auto 0;
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-pastel-yellow);
 }
 
 .header .container {
@@ -263,14 +276,14 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 .nav-link:hover {
     scale: 1.15;
-    color: var(--clr-accent);
+    color: var(--clr-earth-red);
 }
 /*********************************************** HEADER **************************************/
 
 /*********************************************** FOOTER **************************************/
 .footer {
     padding-block: 4rem 2rem;
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-pastel-yellow);
 }
 
 .footer-grid {
@@ -286,7 +299,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     /*********************************************** HERO **************************************/
     .hero-section {
         padding-block: 4rem;
-        background-color: var(--clr-secondary);
+        background-color: var(--clr-pastel-yellow);
     }
 
     .hero-section .container {
@@ -325,7 +338,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
         padding: 1rem;
         border-radius: .5rem;
-        border: 1px solid var(--clr-primary);
+        border: 1px solid var(--clr-earth-green);
     }
 
     .home-img {
@@ -336,11 +349,10 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .partners-section {
         margin-top: 0;
         padding-block: 1rem;
-        background-color: var(--clr-secondary);
     }
 
     .partners-section .container {
-        width: calc(100% - 2rem);
+        width: calc(100% - 3rem);
     }
     /*********************************************** PARTNERS **************************************/
 
@@ -348,7 +360,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     /*********************************************** MISSIONS & GOALS **************************************/
     .missions-section {
         padding-block: 5rem;
-        background-color: var(--clr-secondary);
+        background-color: var(--clr-pastel-yellow);
     }
 
     .missions-grid {
@@ -361,6 +373,30 @@ section:where(:not(.hero-section, .blog-all-section)) {
         padding: 1rem;
         border-radius: .5rem;
         background-color: var(--clr-background);
+    }
+
+    .mission:nth-of-type(1){
+        box-shadow: 5px 5px 0 var(--clr-earth-purple);
+    }
+
+    .mission:nth-of-type(2){
+        box-shadow: 5px 5px 0 var(--clr-earth-cyan);
+    }
+
+    .mission:nth-of-type(3){
+        box-shadow: 5px 5px 0 var(--clr-earth-blue);
+    }
+
+    .mission:nth-of-type(4){
+        box-shadow: 5px 5px 0 var(--clr-earth-yellow);
+    }
+
+    .mission:nth-of-type(5){
+        box-shadow: 5px 5px 0 var(--clr-earth-green);
+    }
+    
+    .mission:nth-of-type(6){
+        box-shadow: 5px 5px 0 var(--clr-earth-red);
     }
 
     .mission-img {
@@ -384,7 +420,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
         padding: 2rem;
         border-radius: .25rem .25rem 50% 50%;
-        outline: 1px solid var(--clr-primary);
+        outline: 1px solid var(--clr-earth-red);
     }
 
     .contact-infos {
@@ -401,25 +437,12 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 
 /*********************************************** ABOUT PAGE **************************************/
-
-    /*********************************************** ABOUT **************************************/
-    :is(.about-section, .context-section, .structuration-section) .container {
-        display: grid;
-        gap: 3rem 2rem;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(calc(350px * var(--content-ratio)), 100%), 1fr));
-    }
-    /*********************************************** ABOUT **************************************/
-
-    /*********************************************** SERVICE-CENTER **************************************/
-    .service-center-section .container {
-        display: grid;
-        gap: 3rem 2rem;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(calc(350px * var(--content-ratio)), 100%), 1fr));
-    }
-    /*********************************************** SERVICE-CENTER **************************************/
-
+:is(.about-section, .context-section, .structuration-section, .service-center-section) .container {
+    display: grid;
+    gap: 3rem 2rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(calc(350px * var(--content-ratio)), 100%), 1fr));
+}
 /*********************************************** ABOUT PAGE **************************************/
 
 /*********************************************** BLOG PAGE **************************************/
@@ -446,13 +469,44 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .post-infos, .project-infos {
     padding: 1rem;
     border-radius: 0 0 .5rem .5rem;
-    border: 1px solid var(--clr-primary);
-
+    
     flex-grow: 1;
     display: flex;
     row-gap: 1rem;
     align-items: start;
     flex-direction: column;
+}
+
+:where(.post-infos, .project-infos):nth-of-type(odd){
+    border: 1px solid var(--clr-earth-yellow);
+}
+
+:where(.post, .project):nth-of-type(odd){
+    border-top: 20px solid var(--clr-earth-purple);
+}
+
+:where(.post-infos, .project-infos):nth-of-type(even){
+    border: 1px solid var(--clr-earth-cyan);
+}
+
+:where(.post, .project):nth-of-type(even){
+    border-top: 20px solid var(--clr-earth-cyan);
+}
+
+:where(.post-infos, .project-infos):nth-of-type(3n){
+    border: 1px solid var(--clr-earth-blue);
+}
+
+:where(.post, .project):nth-of-type(3n){
+    border-top: 20px solid var(--clr-earth-blue);
+}
+
+:where(.post-infos, .project-infos):nth-of-type(5n){
+    border: 1px solid var(--clr-earth-yellow);
+}
+
+:where(.post, .project):nth-of-type(5n){
+    border-top: 20px solid var(--clr-earth-yellow);
 }
 
 .post-description, .project-description {
@@ -479,7 +533,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .form {
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid var(--clr-primary);
+    border: 1px solid var(--clr-earth-red);
 }
 
 .form-grid {
@@ -507,12 +561,12 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .form-group :is(input, textarea, select){
     border-radius: .5rem;
     padding: .25rem .75rem;
-    border: 1px solid var(--clr-primary);
+    border: 1px solid var(--clr-earth-red);
     background-color: var(--clr-background);
 }
 
 .form-group :is(input, textarea, select):focus {
-    border: 1px solid var(--clr-accent);
+    border: 1px solid var(--clr-earth-yellow);
 }
 
 .form-group:has(#description_activite){
@@ -535,7 +589,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
         position: absolute;
         translate: 0 -100%;
         transition: translate 300ms ease;
-        background-color: var(--clr-secondary);
+        background-color: var(--clr-pastel-green);
     }
 
     .nav-menu.open {
