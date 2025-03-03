@@ -184,6 +184,11 @@ input, label, textarea, select {
         border: 1px solid var(--clr-earth-red);
     }
 
+    .btn-sm {
+        padding: .25rem .5rem;
+        font-size: var(--fs-400);
+    }
+
     .btn-lg {
         padding: 1rem 2rem;
         font-size: var(--fs-400);
@@ -286,10 +291,27 @@ section:where(:not(.hero-section, .blog-all-section)) {
     background-color: var(--clr-pastel-yellow);
 }
 
+.footer-main {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+}
+
 .footer-grid {
     gap: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(calc(175px * var(--content-ratio)), 100%), 1fr));
+}
+
+.newsletter-form {
+    display: flex;
+    padding-left: .5rem;
+    border-radius: .5rem;
+    background-color: var(--clr-background);
+}
+
+.newsletter-form input {
+    min-width: 0;
+    max-width: 100%;
 }
 /*********************************************** FOOTER **************************************/
 
@@ -446,7 +468,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     .faq-item {
-        padding: .5rem;
+        padding: .5rem 1rem;
         border-radius: .5rem;
         border: 1px solid var(--clr-earth-green);
     }
