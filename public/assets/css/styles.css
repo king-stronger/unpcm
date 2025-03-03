@@ -38,6 +38,9 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    font-optical-sizing: auto;
+    font-family: "Poppins", serif;
+    font-variation-settings: "wdth" 100;
 }
 
 body {
