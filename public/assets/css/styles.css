@@ -56,9 +56,27 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    scrollbar-width: normal;
+    scrollbar-color: var(--clr-earth-green) var(--clr-pastel-yellow);
+
     font-optical-sizing: auto;
     font-family: "Poppins", serif;
     font-variation-settings: "wdth" 100;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: var(--clr-pastel-yellow);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--clr-earth-green);
 }
 
 body {
