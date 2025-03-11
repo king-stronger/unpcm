@@ -238,7 +238,7 @@ input, label, textarea, select {
 }
 
 section:where(:not(.hero-section, .blog-all-section)) {
-    margin-block: 12rem;
+    margin-block: 20rem;
 }
 
 /*********************************************** HEADER **************************************/
