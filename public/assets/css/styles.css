@@ -483,6 +483,10 @@ section:where(:not(.hero-section, .blog-all-section)) {
         background-color: var(--clr-pastel-yellow);
         border-left: 10px solid var(--clr-earth-yellow);
     }
+
+    .faq-question {
+        font-weight: 600;
+    }
     /*********************************************** FAQ **************************************/
 
 
