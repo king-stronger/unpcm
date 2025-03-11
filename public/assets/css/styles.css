@@ -525,10 +525,11 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .post, .project{
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 2px 1px #a3a3a3;
 }
 
 .post-infos, .project-infos {
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 0 0 .5rem .5rem;
     
     flex-grow: 1;
@@ -536,38 +537,6 @@ section:where(:not(.hero-section, .blog-all-section)) {
     row-gap: 1rem;
     align-items: start;
     flex-direction: column;
-}
-
-:where(.post, .project):nth-of-type(odd) :where(.post-infos, .project-infos){
-    border: 1px solid var(--clr-earth-purple);
-}
-
-:where(.post, .project):nth-of-type(odd){
-    border-top: 20px solid var(--clr-earth-purple);
-}
-
-:where(.post, .project):nth-of-type(even) :where(.post-infos, .project-infos){
-    border: 1px solid var(--clr-earth-cyan);
-}
-
-:where(.post, .project):nth-of-type(even){
-    border-top: 20px solid var(--clr-earth-cyan);
-}
-
-:where(.post, .project):nth-of-type(3n) :where(.post-infos, .project-infos){
-    border: 1px solid var(--clr-earth-blue);
-}
-
-:where(.post, .project):nth-of-type(3n){
-    border-top: 20px solid var(--clr-earth-blue);
-}
-
-:where(.post, .project):nth-of-type(5n) :where(.post-infos, .project-infos){
-    border: 1px solid var(--clr-earth-yellow);
-}
-
-:where(.post, .project):nth-of-type(5n){
-    border-top: 20px solid var(--clr-earth-yellow);
 }
 
 .post-description, .project-description {
