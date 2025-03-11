@@ -474,7 +474,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
         gap: 2rem;
         display: grid;
         justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     }
 
     .contact {
@@ -495,7 +495,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     .contact-img-container {
-        width: 20%;
+        width: max(200px, 20%);
     }
 
     .contact-infos {
@@ -522,7 +522,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     .faq-img-container {
-        width: 25%;
+        width: max(200px, 25%);
     }
 
     .faq-list {
