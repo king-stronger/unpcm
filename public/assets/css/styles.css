@@ -71,7 +71,7 @@ h1, h2, h3 {
 }
 
 p, span, li {
-    line-height: 1.5;
+    line-height: 1.8;
     text-wrap: pretty;
     width: min(65ch, 100%);
 }
@@ -339,6 +339,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
     /*********************************************** HERO **************************************/
 
+    /*********************************************** HOME **************************************/
     .home-section .container {
         gap: 3rem;
         display: grid;
@@ -366,6 +367,8 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .home-img {
         height: 100%;
     }
+    /*********************************************** HOME **************************************/
+
 
     /*********************************************** PARTNERS **************************************/
     .partners-section {
@@ -461,6 +464,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
     /*********************************************** CONTACT **************************************/
 
+    /*********************************************** FAQ **************************************/
     .faq-list {
         display: flex;
         row-gap: 1rem;
@@ -470,8 +474,11 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .faq-item {
         padding: .5rem 1rem;
         border-radius: .5rem;
-        border: 1px solid var(--clr-earth-green);
+        background-color: var(--clr-pastel-yellow);
+        border-left: 10px solid var(--clr-earth-yellow);
     }
+    /*********************************************** FAQ **************************************/
+
 
 /*********************************************** INDEX PAGE **************************************/
 
