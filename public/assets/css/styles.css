@@ -345,6 +345,23 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
     /*********************************************** HERO **************************************/
 
+
+    /*********************************************** STATS **************************************/
+    .stats-section {
+        margin: 0;
+        padding-bottom: 5rem;
+        background-color: var(--clr-pastel-yellow);
+    }
+
+    .stats {
+        display: grid;
+        gap: 1rem 2rem;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    }
+    /*********************************************** STATS **************************************/
+
+
     /*********************************************** HOME **************************************/
     .home-section .container {
         gap: 3rem;
