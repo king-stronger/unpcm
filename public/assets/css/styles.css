@@ -325,18 +325,6 @@ section:where(:not(.hero-section, .blog-all-section)) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(calc(175px * var(--content-ratio)), 100%), 1fr));
 }
-
-.newsletter-form {
-    display: flex;
-    padding-left: .5rem;
-    border-radius: .5rem;
-    background-color: var(--clr-background);
-}
-
-.newsletter-form input {
-    min-width: 0;
-    max-width: 100%;
-}
 /*********************************************** FOOTER **************************************/
 
 
