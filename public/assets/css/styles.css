@@ -238,7 +238,7 @@ input, label, textarea, select {
     }
 
     .link-alt {
-        color: var(--clr-earth-red);
+        color: var(--clr-earth-green);
     }
     
     :is(.link, .link-alt):hover {
