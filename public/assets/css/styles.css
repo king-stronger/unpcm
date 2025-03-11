@@ -627,6 +627,17 @@ section:where(:not(.hero-section, .blog-all-section)) {
     margin-block: 8rem;
 }
 
+.membership-header {
+    display: flex;
+    row-gap: 2rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.membership-img-container {
+    width: max(200px, 20%);
+}
+
 .form {
     padding: 2rem;
     border-radius: 1rem;
