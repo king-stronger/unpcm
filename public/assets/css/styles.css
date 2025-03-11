@@ -114,6 +114,10 @@ input, label, textarea, select {
         width: min(100% - 3rem, 1400px);
     }
 
+    .flow-xl > * + * {
+        margin-top: calc(var(--flow) * 4);
+    }
+
     .flow-lg > * + * {
         margin-top: calc(var(--flow) * 2);
     }
@@ -372,12 +376,14 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
     /*********************************************** PARTNERS **************************************/
     .partners-section {
-        margin-top: 0;
-        padding-block: 1rem;
+        margin-top: 5rem;
     }
 
-    .partners-section .container {
-        width: calc(100% - 3rem);
+    .partners-grid {
+        display: grid;
+        gap: 2rem 1rem;
+        place-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     }
     /*********************************************** PARTNERS **************************************/
 
