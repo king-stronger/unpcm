@@ -13,7 +13,7 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 // Set middleware to serve static files
-app.use(express.static(path.join(dirname, "public")));
+app.use("/assets", express.static(path.join(dirname, "public/assets")));
 
 // Set middlewares to handle the form and json data
 app.use(express.json());
