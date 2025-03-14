@@ -365,6 +365,12 @@ section:where(:not(.hero-section, .blog-all-section)) {
         justify-content: center;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
     }
+
+    .stat {
+        padding: 3rem 1rem;
+        border-radius: .5rem;
+        background-color: var(--clr-earth-yellow);
+    }
     /*********************************************** STATS **************************************/
 
 
