@@ -30,7 +30,7 @@
     --clr-earth-purple: hsl(272, 40.7%, 61.2%);
     --clr-earth-blue: hsl(237, 40.7%, 61.2%);
     --clr-earth-cyan: hsl(185, 40.7%, 61.2%);
-    --clr-earth-green: hsl(129, 40.7%, 61.2%);
+    --clr-earth-green: hsl(129, 40%, 61%);
     --clr-earth-yellow: hsl(56, 40.7%, 61.2%);
 
     /********** Pastel colors variables *******/
@@ -40,9 +40,7 @@
     --clr-pastel-cyan: hsl(185, 71.6%, 85.9%);
     --clr-pastel-green: hsl(129, 71.6%, 85.9%);
     --clr-pastel-yellow: hsl(56, 71.6%, 85.9%);
-
-
-    --content-ratio: 1.25;
+    --clr-pastel-green-light: hsl(129, 71.6%, 96%);
 }
 
 /*********************************************** RESET CSS **************************************/
@@ -91,9 +89,9 @@ h1, h2, h3 {
 }
 
 p, span, li {
+    max-width: 70ch;
     line-height: 1.8;
     text-wrap: pretty;
-    width: min(65ch, 100%);
 }
 
 img, video, svg, picture {
@@ -131,7 +129,7 @@ input, label, textarea, select {
     /************************************ STRUCTURE ******************************/
     .container {
         margin-inline: auto;
-        width: min(100% - 3rem, 1400px);
+        width: min(100% - 3rem, calc(1200px + 3rem));
     }
 
     .flow-xl > * + * {
@@ -252,7 +250,7 @@ input, label, textarea, select {
     position: relative;
     overflow-x: hidden;
     color: var(--clr-text);
-    background: var(--clr-background);
+    background: var(--clr-pastel-green-light);
 }
 
 section:where(:not(.hero-section, .blog-all-section)) {
@@ -323,7 +321,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .footer-grid {
     gap: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(calc(175px * var(--content-ratio)), 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
 }
 /*********************************************** FOOTER **************************************/
 
@@ -339,7 +337,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .hero-section .container {
         display: grid;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(350px * var(--content-ratio))), 1fr));        
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));        
     }
     
 
@@ -378,13 +376,13 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .home-section .container {
         gap: 3rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(350px * var(--content-ratio))), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
     }
 
     .home-list {
         gap: 2rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(225px * var(--content-ratio))), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
     }
 
     .home-list li {
@@ -396,6 +394,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
         padding: 1rem;
         border-radius: .5rem;
+        background-color: var(--clr-background);
         border: 1px solid var(--clr-earth-green);
     }
 
@@ -453,7 +452,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .missions-grid {
         gap: 3rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(275px * var(--content-ratio))), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     }
 
     .mission {
@@ -547,10 +546,6 @@ section:where(:not(.hero-section, .blog-all-section)) {
     /*********************************************** CONTACT **************************************/
 
     /*********************************************** FAQ **************************************/
-    .faq-section .container {
-        max-width: 900px;
-    }
-
     .faq-header {
         display: flex;
         row-gap: 1rem;
@@ -564,32 +559,49 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
     .faq-list {
         display: grid;
-        flex-direction: column;
+        gap: 1rem 5rem;
+        margin-inline: auto;
+        max-width: min(100%, 600px);
+    }
+
+    .faq-list:has(.faq-item.show) {
+        align-items: start;
     }
 
     .faq-item {
-        overflow: hidden;
-        padding-block: 1.5rem;
-        border-bottom: 1px solid lightgray;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-    .faq-item::details-content {
-        block-size: 0;
-        transition: block-size 500ms;
-    }
-
-    .faq-item[open]::details-content {
-        block-size: auto;
+        padding: 1rem;
+        border-radius: .5rem;
+        border: 1px solid lightgray;
+        background-color: var(--clr-background);
     }
 
     .faq-question {
-        font-weight: 600;
-        margin-inline-start: 1rem;
-        list-style-position: outside;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .faq-question::marker {
-        color: gray;
+    .faq-answer {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 300ms;
+    }
+
+    .faq-answer > p {
+        overflow: hidden;
+    }
+
+    .faq-item.show .faq-answer {
+        grid-template-rows: 1fr;
+    }
+
+    .faq-plus {
+        font-size: var(--fs-500);
     }
     /*********************************************** FAQ **************************************/
 
@@ -598,15 +610,15 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 
 /*********************************************** ABOUT PAGE **************************************/
+#about-hero-section {
+    padding-block: 8rem;
+}
+
 :is(.about-section, .context-section, .structuration-section, .service-center-section) .container {
     display: grid;
     gap: 3rem 2rem;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(min(calc(350px * var(--content-ratio)), 100%), 1fr));
-}
-
-:is(.about-section, .context-section, .structuration-section, .service-center-section) img {
-    border-radius: .25rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
 }
 /*********************************************** ABOUT PAGE **************************************/
 
@@ -618,7 +630,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .blog-grid, .projects-grid {
     gap: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(255px * var(--content-ratio))), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 }
 
 :is(.post-img, .project-img) {
@@ -630,6 +642,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 2px 1px #a3a3a3;
+    background-color: var(--clr-background);
 }
 
 .post-infos, .project-infos {
@@ -679,12 +692,13 @@ section:where(:not(.hero-section, .blog-all-section)) {
     padding: 2rem;
     border-radius: 1rem;
     border: 1px solid var(--clr-earth-green);
+    background-color: var(--clr-background);
 }
 
 .form-grid {
     display: grid;
     gap: 1rem 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(calc(275px * var(--content-ratio)), 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 }
 
 .form-group {
@@ -758,23 +772,15 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     .social-links {
-        order: 3;
+        grid-column: span 2;
     }
 
     .footer-grid {
-        row-gap: 3rem;
+        row-gap: 1rem;
     }
 
     .footer-adress {
-        order: 4;
         grid-column: span 2;
     }
 }
-
-@media (width < 900px){
-    :root {
-        --content-ratio: 1;
-    }
-}
-
 /*********************************************** SMALL SCREENS **************************************/
