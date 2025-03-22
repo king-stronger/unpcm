@@ -15,32 +15,17 @@
 
 
     /********** Colors light variables *******/
-    --clr-text: hsl(150, 23%, 5%);
-    --clr-background: #ffffff;
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-white: hsl(0, 0%, 100%);
 
-    /********** Colors dark variables *******/
-    --clrd-text: hsl(150, 23%, 95%);
-    --clrd-background: hsl(135, 40%, 2%);
-    --clrd-primary: hsl(146, 59%, 46%);
-    --clrd-secondary: hsl(146, 66%, 17%);
-    --clrd-accent: hsl(35, 97%, 55%);
-    
-    /********** Earth colors variables *******/
-    --clr-earth-red: hsl(360, 40.7%, 61.2%);
-    --clr-earth-purple: hsl(272, 40.7%, 61.2%);
-    --clr-earth-blue: hsl(237, 40.7%, 61.2%);
-    --clr-earth-cyan: hsl(185, 40.7%, 61.2%);
-    --clr-earth-green: hsl(129, 40%, 61%);
-    --clr-earth-yellow: hsl(56, 40.7%, 61.2%);
-
-    /********** Pastel colors variables *******/
-    --clr-pastel-red: hsl(360, 71.6%, 85.9%);
-    --clr-pastel-purple: hsl(272, 71.6%, 85.9%);
-    --clr-pastel-blue: hsl(237, 71.6%, 85.9%);
-    --clr-pastel-cyan: hsl(185, 71.6%, 85.9%);
-    --clr-pastel-green: hsl(129, 71.6%, 85.9%);
-    --clr-pastel-yellow: hsl(56, 71.6%, 85.9%);
-    --clr-pastel-green-light: hsl(129, 71.6%, 96%);
+    --clr-text: hsl(30, 5%, 15%);
+    --clr-title: hsl(30, 22%, 5%);
+    --clr-link: hsl(210, 57%, 36%);
+    --clr-accent: hsl(15, 71%, 45%);
+    --clr-primary: hsl(150, 57%, 36%);
+    --clr-container: hsl(30, 40%, 61%);
+    --clr-background: hsl(30, 63%, 95%);
+    --clr-container-alt: hsl(120, 63%, 93%);
 }
 
 /*********************************************** RESET CSS **************************************/
@@ -55,7 +40,6 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     scrollbar-width: normal;
-    scrollbar-color: var(--clr-earth-green) var(--clr-pastel-yellow);
 
     font-optical-sizing: auto;
     font-family: "Poppins", serif;
@@ -69,12 +53,10 @@ html {
 
 ::-webkit-scrollbar-track {
     border-radius: 1rem;
-    background: var(--clr-pastel-yellow);
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 1rem;
-    background: var(--clr-earth-green);
 }
 
 body {
@@ -86,12 +68,14 @@ h1, h2, h3 {
     line-height: 1.2;
     font-weight: bold;
     text-wrap: balance;
+    color: var(--clr-title);
 }
 
 p, span, li {
     max-width: 70ch;
-    line-height: 1.8;
+    line-height: 1.6;
     text-wrap: pretty;
+    color: var(--clr-text);
 }
 
 img, video, svg, picture {
@@ -106,11 +90,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--clr-text);
-}
-
-a:visited {
-    color: var(--clr-text);
+    color: var(--clr-black);
 }
 
 button { 
@@ -129,7 +109,7 @@ input, label, textarea, select {
     /************************************ STRUCTURE ******************************/
     .container {
         margin-inline: auto;
-        width: min(100% - 3rem, calc(1200px + 3rem));
+        width: min(100% - 2rem, calc(1200px + 2rem));
     }
 
     .flow-xl > * + * {
@@ -197,15 +177,10 @@ input, label, textarea, select {
     }
     
     .btn-primary {
-        background: var(--clr-earth-green);
+        color: var(--clr-white);
+        background-color: var(--clr-primary);
     }
-
-    .btn-secondary {
-        color: var(--clr-earth-red);
-        background: var(--clr-background);
-        border: 1px solid var(--clr-earth-red);
-    }
-
+    
     .btn-sm {
         padding: .25rem .5rem;
         font-size: var(--fs-400);
@@ -223,24 +198,18 @@ input, label, textarea, select {
 
     .btn:hover {
         border: none;
-        color: var(--clr-text);
-        background: var(--clr-earth-red);
-    }
-
-    .link, .link-alt {
-        display: inline-flex;
+        background: var(--clr-accent);
     }
 
     .link {
-        color: var(--clr-text);
+        display: inline-flex;
+        color: var(--clr-link);
+        transition: scale 200ms;
     }
 
-    .link-alt {
-        color: var(--clr-earth-green);
-    }
-    
-    :is(.link, .link-alt):hover {
-        color: var(--clr-earth-red);
+    .link:hover {
+        scale: 1.2;
+        color: var(--clr-accent);
     }
     /************************************ Buttons & Links ******************************/
 
@@ -250,11 +219,11 @@ input, label, textarea, select {
     position: relative;
     overflow-x: hidden;
     color: var(--clr-text);
-    background: var(--clr-pastel-green-light);
+    background: var(--clr-background);
 }
 
 section:where(:not(.hero-section, .blog-all-section)) {
-    margin-block: 20rem;
+    margin-block: 10rem;
 }
 
 /*********************************************** HEADER **************************************/
@@ -262,7 +231,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
     z-index: 1;
     position: sticky;
     inset: 0 0 auto 0;
-    background-color: var(--clr-pastel-yellow);
+    background-color: var(--clr-container);
 }
 
 .header .container {
@@ -294,23 +263,22 @@ section:where(:not(.hero-section, .blog-all-section)) {
 }
 
 .nav-link {
-    color: var(--clr-text);
-
     display: inline-flex;
+    color: var(--clr-black);
     font-size: var(--fs-400);
     transition: scale 300ms ease;
 }
 
-.nav-link:hover {
-    scale: 1.15;
-    color: var(--clr-earth-red);
+.nav-link:hover, .nav-link:active {
+    scale: 1.2;
+    color: var(--clr-accent);
 }
 /*********************************************** HEADER **************************************/
 
 /*********************************************** FOOTER **************************************/
 .footer {
     padding-block: 4rem 2rem;
-    background-color: var(--clr-pastel-yellow);
+    background-color: var(--clr-container);
 }
 
 .footer-main {
@@ -330,13 +298,14 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
     /*********************************************** HERO **************************************/
     .hero-section {
+        height: 80dvh;
         padding-block: 4rem;
-        background-color: var(--clr-pastel-yellow);
+        background-color: var(--clr-container);
     }
 
     .hero-section .container {
+        gap: 5rem;
         display: grid;
-        align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));        
     }
     
@@ -347,27 +316,32 @@ section:where(:not(.hero-section, .blog-all-section)) {
         align-items: start;
         flex-direction: column;
     }
+
+    .hero-img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
     /*********************************************** HERO **************************************/
 
 
     /*********************************************** STATS **************************************/
-    .stats-section {
-        margin: 0;
-        padding-bottom: 5rem;
-        background-color: var(--clr-pastel-yellow);
+    .stats {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
     }
 
-    .stats {
-        display: grid;
-        gap: 1rem 2rem;
-        justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    .stats > * {
+        flex: 1;
     }
 
     .stat {
-        padding: 3rem 1rem;
+        padding: 1rem .5rem;
         border-radius: .5rem;
-        background-color: var(--clr-earth-yellow);
+        box-shadow: 0 0 1px 0 var(--clr-black);
+        background-color: var(--clr-container-alt);
     }
     /*********************************************** STATS **************************************/
 
@@ -394,12 +368,13 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
         padding: 1rem;
         border-radius: .5rem;
-        background-color: var(--clr-background);
-        border: 1px solid var(--clr-earth-green);
+        box-shadow: 0 0 2px 0 var(--clr-container);
+        background-color: var(--clr-container-alt);
     }
 
     .home-img {
         height: 100%;
+        object-fit: cover;
     }
     /*********************************************** HOME **************************************/
 
@@ -446,11 +421,11 @@ section:where(:not(.hero-section, .blog-all-section)) {
     /*********************************************** MISSIONS & GOALS **************************************/
     .missions-section {
         padding-block: 5rem;
-        background-color: var(--clr-pastel-yellow);
+        background-color: var(--clr-container);
     }
 
     .missions-grid {
-        gap: 3rem;
+        gap: 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     }
@@ -458,37 +433,14 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .mission {
         padding: 1rem;
         border-radius: .5rem;
-        background-color: var(--clr-background);
+        box-shadow: 0 0 1px 0 var(--clr-black);
+        background-color: var(--clr-container-alt);
     }
 
-    .mission:nth-of-type(1){
-        box-shadow: 0 0 1px 1px gray,
-                    -.5rem -.5rem 0 var(--clr-earth-purple);
-    }
-
-    .mission:nth-of-type(2){
-        box-shadow: 0 0 1px 1px gray,
-                    -.5rem -.5rem 0 var(--clr-earth-cyan);
-    }
-
-    .mission:nth-of-type(3){
-        box-shadow: 0 0 1px 1px gray,
-                    -.5rem -.5rem 0 var(--clr-earth-blue);
-    }
-
-    .mission:nth-of-type(4){
-        box-shadow: 0 0 1px 1px gray,
-                    -.5rem -.5rem 0 var(--clr-earth-yellow);
-    }
-
-    .mission:nth-of-type(5){
-        box-shadow: 0 0 1px 1px gray,
-                    -.5rem -.5rem 0 var(--clr-earth-green);
-    }
-    
-    .mission:nth-of-type(6){
-        box-shadow: 0 0 1px 1px gray,
-                    -.5rem -.5rem 0 var(--clr-earth-red);
+    .mission-header {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
     }
 
     .mission-img {
@@ -499,7 +451,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
     /*********************************************** CONTACT **************************************/
     .contact-section {
-        background-color: var(--clr-pastel-yellow);
+        background-color: var(--clr-container);
     }
 
     .contact-section .container {
@@ -518,9 +470,9 @@ section:where(:not(.hero-section, .blog-all-section)) {
         column-gap: 1rem;
 
         padding: 2rem 1rem;
-        box-shadow: 0 0 5px 0 lightgray;
-        background-color: var(--clr-background);
-        border-bottom: 1rem solid var(--clr-earth-green);
+        border-radius: .5rem;
+        box-shadow: 0 0 1px 0 var(--clr-black);
+        background-color: var(--clr-container-alt);
     }
 
     .contact-header {
@@ -564,23 +516,25 @@ section:where(:not(.hero-section, .blog-all-section)) {
         max-width: min(100%, 600px);
     }
 
-    .faq-list:has(.faq-item.show) {
-        align-items: start;
-    }
-
     .faq-item {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        padding: 1rem;
+        padding-inline: 1rem;
         border-radius: .5rem;
-        border: 1px solid lightgray;
-        background-color: var(--clr-background);
+        box-shadow: 0 0 2px 0 var(--clr-container);
+        background-color: var(--clr-container-alt);
     }
 
+    .faq-item:hover, .faq-item:active, .faq-item.is-active { 
+        background-color: var(--clr-container);
+    }
+    
     .faq-question {
         gap: 1rem;
+        padding-block: 1rem;
+        text-align: left;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -597,7 +551,12 @@ section:where(:not(.hero-section, .blog-all-section)) {
     }
 
     .faq-item.show .faq-answer {
+        padding-block: .5rem;
         grid-template-rows: 1fr;
+    }
+
+    .faq-item.show .faq-question {
+        padding-block: 1rem 0;
     }
 
     .faq-plus {
@@ -620,6 +579,22 @@ section:where(:not(.hero-section, .blog-all-section)) {
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
 }
+
+.about-section img {
+    border-radius: 66% 34% 71% 29% / 46% 67% 33% 54%;
+}
+
+.structuration-section img {
+    border-radius: 58% 42% 53% 47% / 41% 61% 39% 59%;
+}
+
+.service-center-section img {
+    border-radius: 63% 37% 59% 41% / 47% 67% 33% 53%;
+}
+
+.context-section img {
+    border-radius: 55% 45% 50% 50% / 45% 60% 40% 55%;
+}
 /*********************************************** ABOUT PAGE **************************************/
 
 /*********************************************** BLOG PAGE **************************************/
@@ -640,9 +615,14 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 .post, .project{
     display: flex;
+    border-radius: .5rem;
     flex-direction: column;
-    box-shadow: 0 0 2px 1px #a3a3a3;
-    background-color: var(--clr-background);
+    box-shadow: 0 0 2px 0 var(--clr-container);
+    background-color: var(--clr-container-alt);
+}
+
+:is(.post, .project) img{
+    border-radius: .5rem .5rem 0 0;
 }
 
 .post-infos, .project-infos {
@@ -677,13 +657,6 @@ section:where(:not(.hero-section, .blog-all-section)) {
     margin-block: 8rem;
 }
 
-.membership-header {
-    display: flex;
-    row-gap: 2rem;
-    align-items: center;
-    flex-direction: column;
-}
-
 .membership-img-container {
     width: max(200px, 20%);
 }
@@ -691,8 +664,8 @@ section:where(:not(.hero-section, .blog-all-section)) {
 .form {
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid var(--clr-earth-green);
-    background-color: var(--clr-background);
+    box-shadow: 0 0 2px 0 var(--clr-container);
+    background-color: var(--clr-container-alt);
 }
 
 .form-grid {
@@ -721,11 +694,11 @@ section:where(:not(.hero-section, .blog-all-section)) {
     border-radius: .5rem;
     padding: .25rem .75rem;
     background-color: var(--clr-background);
-    border: 1px solid var(--clr-earth-green);
+    border: 1px solid var(--clr-container);
 }
 
 .form-group :is(input, textarea, select):focus {
-    border: 1px solid var(--clr-earth-red);
+    border: 1px solid var(--clr-primary);
 }
 
 .form-group:has(#description_activite){
@@ -748,7 +721,7 @@ section:where(:not(.hero-section, .blog-all-section)) {
         position: absolute;
         translate: 0 -100%;
         transition: translate 300ms ease;
-        background-color: var(--clr-pastel-green);
+        background-color: var(--clr-container);
     }
 
     .nav-menu.open {
