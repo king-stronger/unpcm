@@ -19,20 +19,22 @@ function addAnimation(){
     });
 }
 
-const toggles = document.querySelectorAll(".faq-plus");
+const faqButtons = document.querySelectorAll(".faq-plus");
 
-toggles.forEach(icon => {
-    icon.addEventListener("click", () => {
-        const faqItem = icon.closest(".faq-item");
+faqButtons.forEach(faqButton => {
+    const faqItem = faqButton.closest(".faq-item");
 
+    faqButton.addEventListener("click", (event) => {
+        event.preventDefault();
         faqItem.classList.toggle("show");
+        faqItem.classList.toggle("is-active");
 
-        if (icon.classList.contains("bx-plus")) {
-            icon.classList.remove("bx-plus");
-            icon.classList.add("bx-minus");
+
+        if (faqButton.classList.contains("bx-plus")) {
+            faqButton.classList.replace("bx-plus", "bx-minus");
         } else {
-            icon.classList.remove("bx-minus");
-            icon.classList.add("bx-plus");
+            faqButton.classList.replace("bx-minus", "bx-plus");
         }
+
     });
 });
