@@ -180,7 +180,7 @@ input, label, textarea, select {
         color: var(--clr-white);
         background-color: var(--clr-primary);
     }
-    
+
     .btn-sm {
         padding: .25rem .5rem;
         font-size: var(--fs-400);
@@ -380,10 +380,6 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 
     /*********************************************** PARTNERS **************************************/
-    .partners-section {
-        margin-top: 5rem;
-    }
-
     .partner {
         width: fit-content;
     }
@@ -653,10 +649,6 @@ section:where(:not(.hero-section, .blog-all-section)) {
 
 
 /*********************************************** MEMBERSHIP PAGE **************************************/
-.membership-section {
-    margin-block: 8rem;
-}
-
 .membership-img-container {
     width: max(200px, 20%);
 }
@@ -739,9 +731,21 @@ section:where(:not(.hero-section, .blog-all-section)) {
     .icons {
         display: none;
     }
-    
-    .about-content :is(h2, p){
+
+    .hero-img-container, .home-img-container {
+        display: none;
+    }
+
+    :is(.about-section, .context-section, .structuration-section, .service-center-section) .container {
+        row-gap: 1rem;
+    }
+
+    :is(.about-section, .context-section, .structuration-section, .service-center-section) h2 {
         text-align: center;
+    }
+
+    :is(.about-section, .context-section, .structuration-section, .service-center-section) :has(> h2) {
+        order: 2;
     }
 
     .social-links {
