@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devenir membre - UNCPM</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="wrapper">
+                <h1 class="text-lg text-bold">UNCPM</h1>
+    
+                <div class="nav-menu">
+                    <button class="nav-menu-button" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars"></i> 
+                    </button>
+                    <nav class="nav-list" id="nav-list">
+                        <button class="nav-close" onclick="toggleMenu()">X</button>
+                        <a href="/index.html" class="nav-link">Accueil</a>
+                        <a href="/about.html" class="nav-link">A propos</a>
+                        <a href="/gallery.html" class="nav-link">Galerie</a>
+                        <a href="/member.html" class="nav-button">🌱 Devenir membre</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="membership-section">
+            <div class="wrapper flow">
+                <h2 class="text-xl text-center">Demande d'adhésion - Organisations</h2>
+                <p class="text text-center">Remplissez ce formulaire pour rejoindre l’UNCPM en tant qu’organisation membre.</p>
+
+                <form action="https://formcarry.com/s/your-form-id" method="POST" enctype="multipart/form-data" class="form">
+                    <div class="form-group">
+                        <label class="text-bold" for="org-name">Nom de l’organisation <strong class="form-required">*</strong></label>
+                        <input type="text" id="org-name" name="organisation" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-bold" for="status">Statut juridique <strong class="form-required">*</strong></label>
+                        <select id="status" name="statut" required>
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="Coopérative">Coopérative</option>
+                            <option value="Association">Association</option>
+                            <option value="ONG">ONG</option>
+                            <option value="Entreprise Agricole">Entreprise Agricole</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-bold" for="activities">Secteurs d’activité <strong class="form-required">*</strong></label>
+                        <select id="activities" name="activites" required>
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="Maraîchage">Maraîchage</option>
+                            <option value="Arboriculture">Arboriculture</option>
+                            <option value="Transformation Agroalimentaire">Transformation Agroalimentaire</option>
+                            <option value="Céréales">Céréales</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-bold" for="region">Région / Localité <strong class="form-required">*</strong></label>
+                        <input type="text" id="region" name="region" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-bold" for="responsable">Nom du responsable <strong class="form-required">*</strong></label>
+                        <input type="text" id="responsable" name="responsable" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-bold" for="phone">Téléphone <strong class="form-required">*</strong></label>
+                        <input type="tel" id="phone" name="telephone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-bold" for="email">Email <strong class="form-required">*</strong></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-bold" for="documents">Documents justificatifs (PDF, DOC)</label>
+                        <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx">
+                    </div>
+
+                    <div class="form-group form-motivation">
+                        <label class="text-bold" for="motivation">Motivation et objectifs <strong class="form-required">*</strong></label>
+                        <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group-btn">
+                        <button type="submit" class="btn btn-primary">🌱 Envoyer la demande</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrapper">
+                <div class="footer-main">
+                    <h3 class="text text-bold">UNCPM</h3>
+                    <p class="text-sm">
+                        L'UNCPM défend les intérêts des planteurs et maraîchers du Mali avec des solutions innovantes et durables. Contactez-nous pour en savoir plus
+                    </p>
+                </div>
+    
+                <div class="quick-links">
+                    <h3 class="text text-bold">Menu</h3>
+                    <div class="footer-links">
+                        <a href="/index.html" class="footer-link">Accueil</a>
+                        <a href="/index.html" class="footer-link">A propos</a>
+                        <a href="/gallery.html" class="footer-link">Galerie</a>
+                        <a href="/index.html" class="footer-link">Devenir membre</a>
+                    </div>
+                </div>
+    
+                <div class="footer-address">
+                    <h3 class="text text-bold">Adresse</h3>
+                    <div class="adress text-sm flow-sm">
+                        <address>Centre commercial, Quartier du Fleuve</address>
+                        <address>RUE 303, porte 360. BPE: 2483</address>
+                    </div>
+                </div>
+    
+                <div class="footer-social">
+                    <h3 class="text text-bold">Reseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="" class="link-alt text fa-brands fa-facebook"></a>
+                        <a href="" class="link-alt text fa-brands fa-whatsapp"></a>
+                        <a href="" class="link-alt text fa-brands fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
