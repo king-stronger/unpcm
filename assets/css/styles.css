@@ -64,6 +64,13 @@
         border: none;
         background: none;
     }
+
+    input, select, textarea {
+        border: none;
+        outline: none;
+        border-radius: .5rem;
+        padding: .25rem .5rem;
+    }
 }
 
 @layer base {
@@ -196,7 +203,32 @@
         color: white;
         background-color: var(--clr-container) ;
     }
+
+    .about-sections li::before {
+        content: "➤";
+        margin-right: .5rem;
+        color: var(--clr-accent);
+    }
     /************************* ABOUT PAGE *************************/
+
+    /************************* MEMBERSHIP PAGE *************************/
+    .membership-section .wrapper {
+        border-radius: .5rem;
+        border: 1px solid var(--clr-primary);
+    }
+
+    .form-required {
+        color: red;
+    }
+
+    .form-group :is(input, textarea, select){
+        outline: 1px solid gray;
+    }
+
+    .form-group :is(input, textarea, select):focus {
+        outline: 1px solid blue;
+    }
+    /************************* MEMBERSHIP PAGE *************************/
 }
 
 @layer layout {
@@ -274,7 +306,7 @@
         
     /************************* HERO SECTION *************************/
     .hero-section {
-        padding-block: 5rem;
+        padding-block: 3rem 5rem;
     }
     
     .hero-section .wrapper {
@@ -287,6 +319,10 @@
 
 
     /************************* PARTNERS *************************/
+    .partner-section {
+        margin-top: 5rem;
+    }
+    
     .partner-img {
         width: 100px;
     }
@@ -366,7 +402,8 @@
 
     /************************* CTA SECTION *************************/
     .cta-section .wrapper {
-        padding: 3rem;
+        padding-block: 3rem;
+        
         display: flex;
         row-gap: 1.5rem;
         align-items: center;
@@ -430,6 +467,12 @@
         flex-direction: column;
     }
 
+    .social-links {
+        display: flex;
+        column-gap: 1rem;
+        align-items: top;
+    }
+
     @media (width < 400px) {
         .footer-social {
             order: 3;
@@ -451,7 +494,13 @@
     }
 
     .presentation-section, .cshi-section, .challenges-section {
-        padding-block: 5rem;
+        padding-block: 3rem 5rem;
+    }
+
+    @media (width < 600px) {
+        .about-sections .section-img-container {
+            order: -1;
+        }
     }
     /************************* ABOUT PAGE *************************/
 
@@ -471,6 +520,43 @@
         aspect-ratio: 16 / 9;
     }
     /************************* GALLERY PAGE *************************/
+
+    /************************* MEMBERSHIP PAGE *************************/
+    .membership-section {
+        margin-block: 5rem;
+    }
+
+    .membership-section .wrapper {
+        padding: 3rem 2rem;
+    }
+
+    .form {
+        gap: 2rem;
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+
+    .form-group {
+        display: grid;
+        row-gap: .5rem;
+        grid-row: span 2;
+        grid-auto-flow: row;
+        grid-template-rows: subgrid;
+    }
+
+    .form-motivation {
+        grid-column: 1 / -1;
+    }
+
+    .form-group-btn {
+        display: flex;
+        grid-column: 1 / -1;
+        align-items: center;
+        justify-content: center;
+    }
+    /************************* MEMBERSHIP PAGE *************************/
+
 }
 
 @layer utilities {
@@ -556,7 +642,8 @@
         background-color: var(--clr-primary-alt);
     }
 
-    :is(.btn-primary, .btn-primary-alt):hover {
+    :is(.btn-primary, .btn-primary-alt):hover,
+    :is(.btn-primary, .btn-primary-alt):active {
         color: white;
         background-color: var(--clr-accent);
     }
@@ -577,10 +664,13 @@
 
     .link {
         color: black;
-        display: inline;
     }
 
-    .link:hover {
+    .link-alt {
+        color: var(--clr-primary-alt);
+    }
+
+    :is(.link, .link-alt):hover, :is(.link, .link-alt):active {
         color: var(--clr-accent);
     }
     /************************* Links & Buttons *************************/
