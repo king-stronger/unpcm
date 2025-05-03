@@ -402,7 +402,7 @@
 
     /************************* CTA SECTION *************************/
     .cta-section .wrapper {
-        padding-block: 3rem;
+        padding: 3rem 1rem;
         
         display: flex;
         row-gap: 1.5rem;
@@ -523,11 +523,11 @@
 
     /************************* MEMBERSHIP PAGE *************************/
     .membership-section {
-        margin-block: 5rem;
+        margin-block: 4rem;
     }
 
     .membership-section .wrapper {
-        padding: 3rem 2rem;
+        padding: 3rem 1.5rem;
     }
 
     .form {
@@ -542,6 +542,7 @@
         row-gap: .5rem;
         grid-row: span 2;
         grid-auto-flow: row;
+        grid-template-columns: 1fr;
         grid-template-rows: subgrid;
     }
 
