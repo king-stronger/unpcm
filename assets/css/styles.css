@@ -16,6 +16,18 @@
     --clr-primary: hsl(120, 26%, 29%);
     --clr-primary-alt: hsl(45, 72%, 86%);
     --clr-accent: hsl(45, 100%, 41%);
+
+    --shadow-sm: 
+        0 1px 2px rgba(0, 0, 0, 0.07),
+        0 1px 1px rgba(0, 0, 0, 0.04);
+
+    --shadow-md: 
+        0 4px 6px rgba(0, 0, 0, 0.10),
+        0 2px 4px rgba(0, 0, 0, 0.06);
+
+    --shadow-lg: 
+        0 10px 15px rgba(0, 0, 0, 0.15),
+        0 4px 6px rgba(0, 0, 0, 0.10);
 }
 
 @layer reset {
@@ -31,6 +43,7 @@
     }
 
     body {
+        font-display: swap;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
     }
 
@@ -77,6 +90,7 @@
     /************************* HEADER *************************/
     header {
         color: white;
+        box-shadow: var(--shadow-sm);
         background-color: var(--clr-container);
     }
 
@@ -109,7 +123,8 @@
         }
 
         .nav-list {
-            transition: all;
+            transition: all 300ms;
+            box-shadow: var(--shadow-lg);
             background-color: var(--clr-container-alt);
         }
 
@@ -127,23 +142,12 @@
         background-color: var(--clr-container);
     }
     /************************* HERO SECTION *************************/
-    
-
-    /*********************************************** PARTNERS **************************************/
-    .scroller[data-animated="true"]{
-        mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
-    }
-
-    .scroller[data-animated="true"] .scroller-inner {
-        animation: scroll 20s linear infinite;
-    }
-    /*********************************************** PARTNERS **************************************/
-
 
     /************************* STATS SECTION *************************/
     .stat {
         text-align: center;
         border-radius: .5rem;
+        box-shadow: var(--shadow-sm);
         background-color: var(--clr-container-alt);
     }
     /************************* STATS SECTION *************************/
@@ -161,6 +165,7 @@
     .mission {
         border-radius: .5rem;
         background-color: white;
+        box-shadow: var(--shadow-sm);
     }
     /************************* MISSION SECTION *************************/
 
@@ -169,6 +174,7 @@
     .cta-section .wrapper {
         color: white;
         border-radius: .5rem;
+        box-shadow: var(--shadow-lg);
         background-color: var(--clr-container);
     }
     /************************* CTA SECTION *************************/
@@ -211,9 +217,18 @@
     }
     /************************* ABOUT PAGE *************************/
 
+
+    /************************* GALLERY PAGE *************************/
+    .gallery-image {
+        box-shadow: var(--shadow-sm);
+    }
+    /************************* GALLERY PAGE *************************/
+
+
     /************************* MEMBERSHIP PAGE *************************/
     .membership-section .wrapper {
         border-radius: .5rem;
+        box-shadow: var(--shadow-md);
         border: 1px solid var(--clr-primary);
     }
 
@@ -329,27 +344,33 @@
 
     .scroller {
         max-width: 960px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .scroller::-webkit-scrollbar {
+        display: none;
     }
 
     .scroller-inner {
         display: flex;
-        column-gap: 3rem;
         flex-wrap: nowrap;
+        width: max-content; 
+        column-gap: 2.5rem;
         align-items: center;
         padding-block: 1rem;
     }
 
-    .scroller[data-animated="true"]{
-        overflow: hidden;
-    }
+    @media (width < 600px){
+        .partner-img {
+            width: 80px;
+        }
 
-    .scroller[data-animated="true"] .scroller-inner {
-        width: max-content;
-    }
-
-    @keyframes scroll {
-        to {
-            translate: calc(-50% - .5rem);            
+        .scroller-inner {
+            column-gap: 1.5rem;
+            padding-right: 50px;
+            margin-right: -50px;
         }
     }
     /************************* PARTNERS *************************/
@@ -645,6 +666,7 @@
     :is(.btn-primary, .btn-primary-alt):hover,
     :is(.btn-primary, .btn-primary-alt):active {
         color: white;
+        box-shadow: var(--shadow-md);
         background-color: var(--clr-accent);
     }
 
