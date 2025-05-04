@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNCPM - Galerie</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -13,11 +16,13 @@
                 <h1 class="text-lg text-bold">UNCPM</h1>
     
                 <div class="nav-menu">
-                    <button class="nav-menu-button" onclick="toggleMenu()">
+                    <button class="nav-menu-button" onclick="toggleMenu()" aria-label="Ouvrir le menu de navigation">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                     <nav class="nav-list" id="nav-list">
-                        <button class="nav-close" onclick="toggleMenu()">X</button>
+                        <button class="nav-close" onclick="toggleMenu()" aria-label="Fermer le menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                         <a href="/index.html" class="nav-link">Accueil</a>
                         <a href="/about.html" class="nav-link">A propos</a>
                         <a href="/gallery.html" class="nav-link">Galerie</a>
@@ -32,97 +37,97 @@
                 <h2 class="text-xl text-center text-bold">Galerie</h2>
                 <ul class="gallery-list">
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 3.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 3.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 4.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 4.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 5.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 5.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 6.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 6.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 7.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 7.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 8.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 8.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 9.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 9.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 10.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 10.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 11.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 11.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 12.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 12.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 13.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 13.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 14.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 14.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 15.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 15.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 16.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 16.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 17.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 17.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 18.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 18.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 19.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 19.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 20.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 20.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 21.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 21.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 22.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 22.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 23.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 23.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 24.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 24.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 25.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 25.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 26.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 26.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 27.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 27.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 28.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 28.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 29.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 29.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 30.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 30.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 31.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 31.jpg" loading="lazy" alt="gallery image">
                     </li>
                     <li class="gallery-image">
-                        <img src="assets/img/gallery/image 32.jpg" loading="lazy" alt="">
+                        <img src="assets/img/gallery/image 32.jpg" loading="lazy" alt="gallery image">
                     </li>
                 </ul>
             </div>
@@ -158,9 +163,9 @@
                 <div class="footer-social">
                     <h3 class="text text-bold">Reseaux sociaux</h3>
                     <div class="social-links">
-                        <a href="" class="link-alt text fa-brands fa-facebook"></a>
-                        <a href="" class="link-alt text fa-brands fa-whatsapp"></a>
-                        <a href="" class="link-alt text fa-brands fa-linkedin"></a>
+                        <a href="" aria-hidden="true" class="link-alt text fa-brands fa-facebook"></a>
+                        <a href="" aria-hidden="true" class="link-alt text fa-brands fa-whatsapp"></a>
+                        <a href="" aria-hidden="true" class="link-alt text fa-brands fa-linkedin"></a>
                     </div>
                 </div>
             </div>
@@ -168,6 +173,5 @@
     </div>
 
     <script src="assets/js/main.js" defer></script>
-    <script src="https://kit.fontawesome.com/0109ff4b1a.js" crossorigin="anonymous"></script>
 </body>
 </html>
